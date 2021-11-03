@@ -1,2 +1,19 @@
-invoke==1.4.1
-jupyter==1.0.0
+# python==3.9.4
+numpy==1.20.1
+matplotlib==3.3.4
+sympy==1.8
+pyserial==3.5
+# jupyter components (Anaconda Python 3.9)
+jupyter_core==4.7.1
+notebook==6.3.0
+qtconsole==5.0.3
+ipython==7.22.0
+ipykernel==5.3.4
+jupyter_client==6.1.12
+jupyterlab==3.0.14
+nbconvert==6.0.7
+ipywidgets==7.6.3
+nbformat==5.1.3
+traitlets==5.0.5
+# invoke to run build
+invoke==1.6.0

@@ -1,0 +1,16 @@
+name: book39
+channels:
+  - defaults
+dependencies:
+  - python==3.9.4
+  - qtconsole==5.0.3
+  - ipywidgets==7.6.3
+  - jupyter_client==6.1.12
+  - jupyterlab==3.0.14
+  - ipykernel==5.3.4
+  - traitlets==5.0.5
+  - jupyter_core==4.7.1
+  - ipython==7.22.0
+  - notebook==6.3.0
+  - nbconvert==6.0.7
+  - invoke==1.6.0
