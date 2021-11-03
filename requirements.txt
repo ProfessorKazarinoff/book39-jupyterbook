@@ -1,6 +1,6 @@
-# python==3.8.3
+# python==3.9.4
 jupyter==1.0.0
-numpy==1.18.5
-matplotlib==3.2.2
-sympy==1.6.1
-pyserial==3.4
+numpy==1.20.1
+matplotlib==3.3.4
+sympy==1.8
+pyserial==3.5

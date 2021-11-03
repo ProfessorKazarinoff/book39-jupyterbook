@@ -1,4 +1,4 @@
-# Problem-Solving-with-Python-38-Edition
+# Problem-Solving-with-Python-39-Edition
 
 Repo for the book: Problem Solving with Python 3.9 Edition by Peter D. Kazarinoff, PhD.
 
