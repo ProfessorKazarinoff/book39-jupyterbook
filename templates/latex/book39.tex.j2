@@ -1,27 +1,27 @@
-% book38.tplx
+% book39.tex.j2
 
 % Inherit from report
-((* extends 'report.tplx' *))
+((* extends 'report.tex.j2' *))
 
 ((* block docclass *))
     \documentclass{book}
 ((* endblock docclass *))
 
 ((* block packages *))
-    ((* include 'packages.tplx' *))
+    ((* include 'packages.tex.j2' *))
 ((* endblock packages *))
 
 ((* block preamble *))
 ((* endblock preamble *))
 
 ((* block definitions *))
-    ((* include 'custom_colors.tplx' *))
-    ((* include 'environments.tplx' *))
+    ((* include 'custom_colors.tex.j2' *))
+    ((* include 'environments.tex.j2' *))
 
     ((* block title *))
         \title{Problem Solving with Python}
         \author{Peter D. Kazarinoff, PhD}
-        \date{3.8 Edition}
+        \date{3.9 Edition}
     ((* endblock title *))
     ((( super() )))
 ((* endblock definitions *))

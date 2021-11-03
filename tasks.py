@@ -2,10 +2,10 @@
 """
 An invoke script to run build tasks for the book
 
-invoke build website # this builds the mkdocs website website
+$ invoke build website # this builds the mkdocs website website
  -- then cd into website directory and run mkdocs serve to view
 
-invoke build pdf # this will eventually output a pdf/.tex file to complile with LaTeX to build a pdf
+$ invoke build pdf # this will eventually output a pdf/.tex file to complile with LaTeX to build a pdf
  -- then cd into pdf directory and use MikTek or other LaTeX complier to output a .pdf
 
 """
@@ -93,8 +93,8 @@ def pdf(c):
     nbnode = merge_notebooks(nb_path_lst)
     # export notebook node into a .tex file using templates
     d = datetime.datetime.now()
-    output_file_path = Path(os.getcwd(), "pdf", f"Problem_Solving_with_Python_38_Edition_{d:%Y}_{d:%m}_{d:%d}.tex")
-    template_file_path = Path(os.getcwd(), "templates", "latex", "book38.tplx")
+    output_file_path = Path(os.getcwd(), "pdf", f"Problem_Solving_with_Python_39_Edition_{d:%Y}_{d:%m}_{d:%d}.tex")
+    template_file_path = Path(os.getcwd(), "templates", "latex", "book39.tex.j2")
     print("Attempting to produce a .tex file from the big combined notebook...")
     export_tex(nbnode, output_file_path, template_file_path)
     # modify TOC in .tex file so that chapter numbering works
@@ -123,9 +123,7 @@ def export_tex(
     resources = {}
     resources["unique_key"] = "combined"
     resources["output_files_dir"] = "combined_files"
-    exporter = MyLatexExporter()
-    if template_file_path is not None:
-        exporter.template_file = str(template_file_path)
+    exporter = MyLatexExporter(template_file=str(template_file_path))
     mypreprocessor = RegexRemovePreprocessor()
     mypreprocessor.patterns = ["\s*\Z"]
     exporter.register_preprocessor(mypreprocessor, enabled=True)
@@ -158,6 +156,7 @@ def convert_links(source):
 
 
 class MyLatexExporter(LatexExporter):
+
     def default_filters(self):
         yield from super().default_filters()
         yield ("resolve_references", convert_links)
