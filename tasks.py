@@ -109,7 +109,7 @@ def pdf(c):
         print(f"Coppied {f_name} to pdf/ directory")
     # Print the final output
     print(
-        f"Conversion complete.... \n Find the exported .tex file in: \n {output_file_path}"
+        f"Conversion complete!!! \n Find the exported .tex file in: \n {output_file_path}"
     )
 
 
