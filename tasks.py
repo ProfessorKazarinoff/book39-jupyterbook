@@ -51,19 +51,19 @@ def website(c):
     mkdocs_build_config = Path("website", "mkdocs.yml")
     preamble_template = Path("templates", "mkdocs", "preamble.py")
     preamble_file = Path("website", "preamble.py")
-    mathjax_config_file = Path("templates","mkdocs","mathjax_config.js")
-    extra_css_file = Path("templates","mkdocs","extra.css")
+    mathjax_config_file = Path("templates", "mkdocs", "mathjax_config.js")
+    extra_css_file = Path("templates", "mkdocs", "extra.css")
     print("Copying mkdocs.yml and preamble.py from templates/mkdocs/ to website/")
     copyfile(mkdocs_config_template, mkdocs_build_config)
     copyfile(preamble_template, preamble_file)
     print("Copying src/ into website/docs/")
     copytree(Path("src"), Path("website", "docs"))
     print("Copying mathjax_config.js into website/docs/javascripts/mathjax_config.js")
-    Path("website", "docs","js").mkdir(parents=True, exist_ok=True)
-    copyfile(mathjax_config_file, Path("website", "docs","js","mathjax_config.js"))
+    Path("website", "docs", "js").mkdir(parents=True, exist_ok=True)
+    copyfile(mathjax_config_file, Path("website", "docs", "js", "mathjax_config.js"))
     print("Copying extra.css into website/docs/css/extra.css")
-    Path("website", "docs","css").mkdir(parents=True, exist_ok=True)
-    copyfile(extra_css_file, Path("website", "docs","css","extra.css"))
+    Path("website", "docs", "css").mkdir(parents=True, exist_ok=True)
+    copyfile(extra_css_file, Path("website", "docs", "css", "extra.css"))
     print("Changing to website directory")
     chdir("website")
     print(f"Current working directory {getcwd()}")
@@ -77,6 +77,7 @@ def pdf(c):
     """
     a task to build a LaTeX .tex doc from the src notebooks
     """
+    t1 = datetime.datetime.now()
     print("Building LaTeX .tex doc from src/ notebooks...")
     # create empty pdf/ and pdf/images/ directories
     make_empty_dir("pdf")
@@ -93,7 +94,11 @@ def pdf(c):
     nbnode = merge_notebooks(nb_path_lst)
     # export notebook node into a .tex file using templates
     d = datetime.datetime.now()
-    output_file_path = Path(os.getcwd(), "pdf", f"Problem_Solving_with_Python_39_Edition_{d:%Y}_{d:%m}_{d:%d}.tex")
+    output_file_path = Path(
+        os.getcwd(),
+        "pdf",
+        f"Problem_Solving_with_Python_39_Edition_{d:%Y}_{d:%m}_{d:%d}.tex",
+    )
     template_file_path = Path(os.getcwd(), "templates", "latex", "book39.tex.j2")
     print("Attempting to produce a .tex file from the big combined notebook...")
     export_tex(nbnode, output_file_path, template_file_path)
@@ -108,8 +113,10 @@ def pdf(c):
         )
         print(f"Coppied {f_name} to pdf/ directory")
     # Print the final output
+    t2 = datetime.datetime.now()
+    delta_t = t2 - t1
     print(
-        f"Conversion complete!!! \n Find the exported .tex file in: \n {output_file_path}"
+        f"Conversion complete!!!     processed in: {str(delta_t).split(':')[-1]} seconds \n Find the exported .tex file in: \n {output_file_path}"
     )
 
 
@@ -156,7 +163,6 @@ def convert_links(source):
 
 
 class MyLatexExporter(LatexExporter):
-
     def default_filters(self):
         yield from super().default_filters()
         yield ("resolve_references", convert_links)
