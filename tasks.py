@@ -26,6 +26,7 @@ from nbconvert.writers import FilesWriter
 from nbconvert.preprocessors import RegexRemovePreprocessor
 from pandocfilters import applyJSONFilters, RawInline
 
+import asyncio
 
 @task
 def build(c):
@@ -41,6 +42,7 @@ def website(c):
     """
     a task to build an mkdocs website from the src notebooks
     """
+    t1 = datetime.datetime.now()
     print("Building mkdocs website from src notebooks...")
     if Path("website").is_dir():
         print("Found website directory, deleting...")
@@ -69,7 +71,11 @@ def website(c):
     print(f"Current working directory {getcwd()}")
     print("running mkdocs build...")
     print()
+    #asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     c.run("mkdocs build")
+    t2 = datetime.datetime.now()
+    delta_t = t2 - t1
+    print(f"\nWebsite build complete!!!     processed in: {str(delta_t).split(':')[-1]} seconds ")
 
 
 @task
