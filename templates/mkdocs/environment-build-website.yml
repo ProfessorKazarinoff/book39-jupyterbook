@@ -3,6 +3,7 @@ channels:
   - defaults
 dependencies:
   - python==3.9.4
+  - pip==21.0.1
   - notebook==6.3.0
   - numpy==1.20.1
   - invoke==1.6.0
@@ -18,7 +19,8 @@ dependencies:
   - nbconvert==6.0.7
   - traitlets==5.0.5
   - matplotlib==3.3.4
-  - mkdocs==1.2.3
-  - mkdocs-material==7.3.6
   - git==2.23.0
-prefix: C:\Users\peter.kazarinoff\Miniconda3\envs\book39-website
+  - conda-forge::mkdocs==1.2.3
+  - conda-forge::mkdocs-material==7.3.6
+  - pip:
+    - mknotebooks==0.7.1
