@@ -1,0 +1,20 @@
+# python==3.9.6
+# pip==21.3.1
+notebook==6.3.0
+numpy==1.20.1
+invoke==1.6.0
+pyserial==3.5
+sympy==1.8
+jupyter_client==6.1.12
+jupyterlab==3.0.14
+ipython==7.22.0
+ipywidgets==7.6.3
+ipykernel==5.3.4
+qtconsole==5.0.3
+jupyter_core==4.7.1
+nbconvert==6.0.7
+traitlets==5.0.5
+matplotlib==3.3.4
+mkdocs==1.2.3
+mkdocs-material==7.3.6
+mknotebooks==0.7.1
