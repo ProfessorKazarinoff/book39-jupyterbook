@@ -10,23 +10,22 @@ $ invoke build pdf # this will eventually output a pdf/.tex file to complile wit
 
 """
 
-from pathlib import Path
-from shutil import copyfile, rmtree, copytree
-from os import chdir, getcwd, listdir
+import datetime
 import os
 import re
 import sys
-import datetime
+from os import chdir, getcwd, listdir
+from pathlib import Path
+from shutil import copyfile, copytree, rmtree
 
-from invoke import task
 import nbformat
-from nbformat import NotebookNode
+from invoke import task
 from nbconvert import LatexExporter
-from nbconvert.writers import FilesWriter
 from nbconvert.preprocessors import RegexRemovePreprocessor
-from pandocfilters import applyJSONFilters, RawInline
+from nbconvert.writers import FilesWriter
+from nbformat import NotebookNode
+from pandocfilters import RawInline, applyJSONFilters
 
-import asyncio
 
 @task
 def build(c):
@@ -37,8 +36,8 @@ def build(c):
     print()
 
 
-@task
-def website(c):
+@task(help={"deploy": "Set --deploy for deployment on gh-pages"})
+def website(c, deploy=False):
     """
     a task to build an mkdocs website from the src notebooks
     """
@@ -71,11 +70,15 @@ def website(c):
     print(f"Current working directory {getcwd()}")
     print("running mkdocs build...")
     print()
-    #asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     c.run("mkdocs build")
     t2 = datetime.datetime.now()
     delta_t = t2 - t1
-    print(f"\nWebsite build complete!!!     processed in: {str(delta_t).split(':')[-1]} seconds ")
+    print(
+        f"\nWebsite build complete!!!     processed in: {str(delta_t).split(':')[-1]} seconds "
+    )
+    if deploy:
+        print("Deploying to GitHub Pages...")
+        c.run("mkdocs gh-deploy --force --verbose")
 
 
 @task
