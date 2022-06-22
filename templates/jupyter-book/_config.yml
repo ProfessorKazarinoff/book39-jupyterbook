@@ -1,0 +1,27 @@
+# _config.yml
+title: Problem Solving with Python 3.9 Edition
+author: Peter D. Kazarinoff
+only_build_toc_files: true
+logo: templates/jupyter-book/cover.jpg
+execute:
+  execute_notebooks: 'off'
+
+repository:
+  url: https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition  # The URL to your book's repository
+  path_to_book: "src"
+  branch: master
+
+#######################################################################################
+# HTML-specific settings
+html:
+  favicon                   : "templates/jupyter-book/favicon.png"  # A path to a favicon image
+  use_edit_page_button      : false
+  use_repository_button     : true  # Whether to add a link to your repository button
+  use_issues_button         : false  # Whether to add an "open an issue" button
+  use_multitoc_numbering    : true   # Continuous numbering across parts/chapters
+  extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
+  extra_footer              : <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>&nbsp; This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+  google_analytics_id       : ""  # A GA id that can be used to track book views.
+  home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
+  # baseurl                   : ""  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+  # announcement              : "" # A banner announcement at the top of the site.

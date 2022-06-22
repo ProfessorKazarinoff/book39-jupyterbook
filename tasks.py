@@ -35,6 +35,12 @@ def build(c):
     print("Building...")
     print()
 
+@task(help={"deploy": "Set --deploy for deployment on gh-pages"})
+def jb(c, deploy=False):
+    print("Building using Jupyter Book...")
+    c.run("jb build --path-output website/ --config templates/jupyter-book/_config.yml --toc templates/jupyter-book/_toc.yml --verbose .")
+    if deploy:
+        pass
 
 @task(help={"deploy": "Set --deploy for deployment on gh-pages"})
 def website(c, deploy=False):
