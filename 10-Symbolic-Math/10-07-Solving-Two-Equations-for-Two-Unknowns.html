@@ -1,0 +1,880 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Solving Two Equations for Two Unknows &#8212; Problem Solving with Python 3.9 Edition</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Summary" href="10-08-Summary.html" />
+    <link rel="prev" title="Solving Equations" href="10-06-Solving-Equations.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/cover.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Problem Solving with Python 3.9 Edition</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Problem Solving with Python 3.9 Edition
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01-Orientation/01-00-Orientation.html">
+   Orientation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-Orientation/01-01-Why-Python.html">
+     Why Python?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-Orientation/01-02-The-Anaconda-Distribution-of-Python.html">
+     The Anaconda Distribution of Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-Orientation/01-03-Installing-Anaconda-on-Windows.html">
+     Installing Anaconda on Windows
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../03-The-Python-REPL/03-01-Introduction.html">
+   The Python REPL
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03.01-Python-as-a-Calculator.html">
+     Python as a Calculator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03-03-Variables.html">
+     Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03-04-String-Operations.html">
+     String Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03-05-Print-Statements.html">
+     Print Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03-06-Summary.html">
+     Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03-07-Review-Questions.html">
+     Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../04-Data-Types-and-Variables/04-01-Introduction.html">
+   Data Types and Variables
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04-02-Numeric-Data-Types.html">
+     Numeric Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04-03-Boolean-Data-Type.html">
+     Boolean Data Type
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04-04-Strings.html">
+     Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04-05-Lists.html">
+     Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04-06-Dictionaries-and-Tuples.html">
+     Dictionaries and Tuples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04-07-Summary.html">
+     Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04-08-Review-Questions.html">
+     Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../05-NumPy-and-Arrays/05-01-Introduction.html">
+   NumPy and Arrays
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-02-NumPy.html">
+     NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-03-Installing-NumPy.html">
+     Installing NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-04-Python-Lists-and-NumPy-Arrays.html">
+     Python Lists and NumPy Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-05-Array-Creation.html">
+     Array Creation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-06-Array-Indexing.html">
+     Array Indexing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-07-Array-Slicing.html">
+     Array Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-08-Array-Operations.html">
+     Array Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-09-Systems-of-Linear-Equations.html">
+     Systems of Linear Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-10-Summary.html">
+     Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-11-Review-Questions.html">
+     Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="10-00-Introduction.html">
+   Symbolic Math
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="10-01-SymPy.html">
+     SymPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10-02-Installing-SymPy.html">
+     Installing SymPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10-03-Defining-Variables.html">
+     Defining Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10-04-Expressions-and-Substitutions.html">
+     Expressions and Substitutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10-05-Equations.html">
+     Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10-06-Solving-Equations.html">
+     Solving Equations
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Solving Two Equations for Two Unknows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10-08-Summary.html">
+     Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10-09-Review-Questions.html">
+     Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition/master?urlpath=tree/src/10-Symbolic-Math/10-07-Solving-Two-Equations-for-Two-Unknowns.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/10-Symbolic-Math/10-07-Solving-Two-Equations-for-Two-Unknowns.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solve-an-engineering-statics-problem-with-sympy">
+   Solve an engineering statics problem with SymPy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#given">
+     GIVEN:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#find">
+     FIND:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution">
+     SOLUTION:
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Solving Two Equations for Two Unknows</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solve-an-engineering-statics-problem-with-sympy">
+   Solve an engineering statics problem with SymPy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#given">
+     GIVEN:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#find">
+     FIND:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution">
+     SOLUTION:
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="solving-two-equations-for-two-unknows">
+<h1>Solving Two Equations for Two Unknows<a class="headerlink" href="#solving-two-equations-for-two-unknows" title="Permalink to this headline">#</a></h1>
+<p>Solving two equations for two unknowns can be accomplished using SymPy. Consider the following set of two equations with two variables:</p>
+<div class="math notranslate nohighlight">
+\[ x + y - 5 = 0 \]</div>
+<div class="math notranslate nohighlight">
+\[ x - y + 3 = 0 \]</div>
+<p>To solve this system of two equations for the two unknowns, <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, first import the SymPy package. From the SymPy package, the functions <code class="docutils literal notranslate"><span class="pre">symbols</span></code>, <code class="docutils literal notranslate"><span class="pre">Eq</span></code> and <code class="docutils literal notranslate"><span class="pre">solve</span></code> are needed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span><span class="p">,</span> <span class="n">solve</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, create two SymPy symbols objects, <span class="math notranslate nohighlight">\(x\)</span>, and <span class="math notranslate nohighlight">\(y\)</span>. As shown in a previous section, the string passed as an input argument to the <code class="docutils literal notranslate"><span class="pre">symbols()</span></code> function, <code class="docutils literal notranslate"><span class="pre">'x</span> <span class="pre">y'</span></code>, does not contain any commas. The outputs of the <code class="docutils literal notranslate"><span class="pre">symbols()</span></code> function are the two symbol objects <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>. These outputs must be separated by a comma and are not surrounded by quotes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now define the two equations as SymPy equation objects. Remember to supply the right-hand side and left-hand side of the equation as two separate arguments to the <code class="docutils literal notranslate"><span class="pre">Eq</span></code> class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eq1</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">-</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can use SymPy’s <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function to compute the value of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>. The first argument passed to the <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function is a tuple of the two equations <code class="docutils literal notranslate"><span class="pre">(eq1,</span> <span class="pre">eq2)</span></code>. The second argument passed to the <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function is a tuple of the variables we want to solve for <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{x: 1, y: 4}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The solution is in the form of a Python dictionary. The dictionary keys are the variables and the dictionary values are the numerical solutions.</p>
+<p>We can access the solution out of the solution dictionary using regular dictionary indexing.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sol_dict</span> <span class="o">=</span> <span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;x = </span><span class="si">{</span><span class="n">sol_dict</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;y = </span><span class="si">{</span><span class="n">sol_dict</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 1
+y = 4
+</pre></div>
+</div>
+</div>
+</div>
+<section id="solve-an-engineering-statics-problem-with-sympy">
+<h2>Solve an engineering statics problem with SymPy<a class="headerlink" href="#solve-an-engineering-statics-problem-with-sympy" title="Permalink to this headline">#</a></h2>
+<p>Consider the following engineering statics problem. This problem can be solved with symbolic math and SymPy.</p>
+<section id="given">
+<h3>GIVEN:<a class="headerlink" href="#given" title="Permalink to this headline">#</a></h3>
+<p>A weight of 22 lbs is hung from a ring. The ring is supported by two cords. The first cord, cord CE, is 30 degrees above the horizontal and to the right. The second cord, cord BD, is 45 degrees to the left and above the horizontal.</p>
+<p><span class="math notranslate nohighlight">\(w\)</span> = 22 lb</p>
+<p><span class="math notranslate nohighlight">\(T_{CE}\)</span> &#64; +30 degrees CCW relative to +x-axis</p>
+<p><span class="math notranslate nohighlight">\(T_{BD}\)</span> &#64; +45 degress CW relative to -x-axis</p>
+</section>
+<section id="find">
+<h3>FIND:<a class="headerlink" href="#find" title="Permalink to this headline">#</a></h3>
+<p>The magnitude of <span class="math notranslate nohighlight">\(T_{CE}\)</span> and <span class="math notranslate nohighlight">\(T_{BD}\)</span></p>
+</section>
+<section id="solution">
+<h3>SOLUTION:<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h3>
+<p>To solve for the magnitude of <span class="math notranslate nohighlight">\(T_{CE}\)</span> and <span class="math notranslate nohighlight">\(T_{BD}\)</span>, we need to solve two equations for two unknowns.</p>
+<p>To accomplish this with Python, first import NumPy and SymPy.  The SymPy functions <code class="docutils literal notranslate"><span class="pre">symbols</span></code>, <code class="docutils literal notranslate"><span class="pre">Eq</span></code>, and <code class="docutils literal notranslate"><span class="pre">solve</span></code> are needed. We will also use NumPy’s trig functions to solve this problem.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span><span class="p">,</span> <span class="n">solve</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, define the symbolic math variables. Multiple symbolic math variables can be defined at the same time. Remember the argument names (on the right-hand side of the assignment operator <code class="docutils literal notranslate"><span class="pre">=</span></code>) need to be enclosed in quotes<code class="docutils literal notranslate"><span class="pre">'</span>&#160; <span class="pre">'</span></code> and separated by spaces, no commas. The object names (on the left-hand side of the assignment operator <code class="docutils literal notranslate"><span class="pre">=</span></code>) are separated with commas, no quotes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tce</span><span class="p">,</span> <span class="n">Tbd</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;Tce Tbd&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Two equations based on the sum of the forces need to be defined.</p>
+<p>Assuming the ring is in static equilibrium:</p>
+<div class="math notranslate nohighlight">
+\[ \Sigma \vec{F} = 0 \]</div>
+<div class="math notranslate nohighlight">
+\[ \Sigma F_{x} = 0 \]</div>
+<div class="math notranslate nohighlight">
+\[ \Sigma F_{y} = 0 \]</div>
+<p>The three forces opperating on the ring are defined as:</p>
+<div class="math notranslate nohighlight">
+\[ {T_{ce}} = tension \ in \ cable \ CE \ \]</div>
+<div class="math notranslate nohighlight">
+\[ \vec{T_{ce}} = T_{ce} cos(30)\hat{i} + T_{ce} sin(30)\hat{j} \]</div>
+<div class="math notranslate nohighlight">
+\[ {T_{bd}} = tension \ in \ cable \ BD \]</div>
+<div class="math notranslate nohighlight">
+\[ \vec{T_{bd}} = - T_{bd} cos(45)\hat{i} + T_{bd} sin(45)\hat{j} \]</div>
+<div class="math notranslate nohighlight">
+\[ \vec{w} = 0 \hat{i} - 22 \hat{j} \]</div>
+<p>Taking <span class="math notranslate nohighlight">\(\Sigma F_{x} = 0\)</span> (sum of the <span class="math notranslate nohighlight">\(\hat{i}\)</span> terms):</p>
+<div class="math notranslate nohighlight">
+\[ T_{ce} cos(30) - T_{bd} cos(45) + 0 = 0 \]</div>
+<p>Taking <span class="math notranslate nohighlight">\(\Sigma F_{y} = 0\)</span> (sum of the <span class="math notranslate nohighlight">\(\hat{j}\)</span> terms):</p>
+<div class="math notranslate nohighlight">
+\[ T_{ce} sin(30) + T_{bd} sin(45) - 22 = 0 \]</div>
+<p>The first equation, based on the sum of the forces in the x-direction (the <span class="math notranslate nohighlight">\(\hat{i}\)</span> terms) is:</p>
+<div class="math notranslate nohighlight">
+\[ T_{ce} cos(30) - T_{bd} cos(45) + 0 = 0 \]</div>
+<p>This equation can be represented as a SymPy equation object. Note the right-hand side of the equation is <code class="docutils literal notranslate"><span class="pre">0</span></code>. SymPy equation objects are instantiated with expressions equal to zero. If the expression was not equal to zero, simply subtract both sides by the term on the right-hand side of the equals sign and use the resulting expression (equal to zero) to create the SymPy equation object.</p>
+<p>A detail in the code section below is that NumPy’s <code class="docutils literal notranslate"><span class="pre">np.cos()</span></code> function accepts an angle in radians. Therefore, we need to convert our angles from degrees to radians using NumPy’s <code class="docutils literal notranslate"><span class="pre">np.radians()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eq1</span><span class="o">=</span><span class="n">Eq</span><span class="p">(</span><span class="n">Tce</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="o">-</span> <span class="n">Tbd</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">)),</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eq(-0.707106781186548*Tbd + 0.866025403784439*Tce, 0)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The second equation, based on the sum of the forces in the y-direction is:</p>
+<div class="math notranslate nohighlight">
+\[ T_{ce} sin(30) + T_{bd} sin(45) - 22 = 0 \]</div>
+<p>We can define this equation as a SymPy equation object as well:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eq2</span><span class="o">=</span><span class="n">Eq</span><span class="p">(</span><span class="n">Tce</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="o">+</span> <span class="n">Tbd</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">))</span><span class="o">-</span><span class="mi">22</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eq2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eq(0.707106781186548*Tbd + 0.5*Tce - 22, 0)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, solve the two equations <code class="docutils literal notranslate"><span class="pre">eq1</span></code> and <code class="docutils literal notranslate"><span class="pre">eq2</span></code> for the two unknows <span class="math notranslate nohighlight">\(T_{ce}\)</span> and <span class="math notranslate nohighlight">\(T_{bd}\)</span> with SymPy’s <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function. The first argument passed to the <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function is a tuple of equations to solve, the second argument passed to the <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function is a tuple of the variables to solve for.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">Tce</span><span class="p">,</span> <span class="n">Tbd</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{Tce: 16.1051177665153, Tbd: 19.7246603876972}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The solution is saved in a Python dictionary. The dictionary keys are the variable names <code class="docutils literal notranslate"><span class="pre">Tbd</span></code> and <code class="docutils literal notranslate"><span class="pre">Tce</span></code> and the dictionary values are the numerical solutions.</p>
+<p>The numerical solutions can be pulled out of the dictionary using regular Python dictionary access. Note <code class="docutils literal notranslate"><span class="pre">Tce</span></code> and <code class="docutils literal notranslate"><span class="pre">Tbd</span></code> are SymPy symbols objects, not strings.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sol_dict</span> <span class="o">=</span> <span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">Tce</span><span class="p">,</span> <span class="n">Tbd</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Tce = </span><span class="si">{</span><span class="n">sol_dict</span><span class="p">[</span><span class="n">Tce</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Tce = </span><span class="si">{</span><span class="n">sol_dict</span><span class="p">[</span><span class="n">Tbd</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tce = 16.1051177665153
+Tce = 19.7246603876972
+</pre></div>
+</div>
+</div>
+</div>
+<p>The same problem can be solved again, but with <span class="math notranslate nohighlight">\(w\)</span> kept as a variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="p">,</span> <span class="n">Tce</span><span class="p">,</span> <span class="n">Tbd</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;w, Tab, Tac&#39;</span><span class="p">)</span>
+
+<span class="n">eq1</span><span class="o">=</span><span class="n">Eq</span><span class="p">(</span><span class="n">Tce</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="o">-</span> <span class="n">Tbd</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">)),</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">eq2</span><span class="o">=</span><span class="n">Eq</span><span class="p">(</span><span class="n">Tce</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="o">+</span> <span class="n">Tbd</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">))</span><span class="o">-</span><span class="n">w</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">Tce</span><span class="p">,</span><span class="n">Tbd</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{Tab: 0.732050807568877*w, Tac: 0.896575472168053*w}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The result is a solution is in terms of the variable <span class="math notranslate nohighlight">\(w\)</span>.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./10-Symbolic-Math"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="10-06-Solving-Equations.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Solving Equations</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="10-08-Summary.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Summary</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Peter D. Kazarinoff<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>&nbsp; This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,849 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Review Questions &#8212; Problem Solving with Python 3.9 Edition</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data Types and Variables" href="../04-Data-Types-and-Variables/04-01-Introduction.html" />
+    <link rel="prev" title="Summary" href="03-06-Summary.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/cover.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Problem Solving with Python 3.9 Edition</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Problem Solving with Python 3.9 Edition
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01-Orientation/01-00-Orientation.html">
+   Orientation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-Orientation/01-01-Why-Python.html">
+     Why Python?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-Orientation/01-02-The-Anaconda-Distribution-of-Python.html">
+     The Anaconda Distribution of Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-Orientation/01-03-Installing-Anaconda-on-Windows.html">
+     Installing Anaconda on Windows
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="03-01-Introduction.html">
+   The Python REPL
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="03.01-Python-as-a-Calculator.html">
+     Python as a Calculator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-03-Variables.html">
+     Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-04-String-Operations.html">
+     String Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-05-Print-Statements.html">
+     Print Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-06-Summary.html">
+     Summary
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../04-Data-Types-and-Variables/04-01-Introduction.html">
+   Data Types and Variables
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04-02-Numeric-Data-Types.html">
+     Numeric Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04-03-Boolean-Data-Type.html">
+     Boolean Data Type
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04-04-Strings.html">
+     Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04-05-Lists.html">
+     Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04-06-Dictionaries-and-Tuples.html">
+     Dictionaries and Tuples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04-07-Summary.html">
+     Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04-08-Review-Questions.html">
+     Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../05-NumPy-and-Arrays/05-01-Introduction.html">
+   NumPy and Arrays
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-02-NumPy.html">
+     NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-03-Installing-NumPy.html">
+     Installing NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-04-Python-Lists-and-NumPy-Arrays.html">
+     Python Lists and NumPy Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-05-Array-Creation.html">
+     Array Creation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-06-Array-Indexing.html">
+     Array Indexing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-07-Array-Slicing.html">
+     Array Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-08-Array-Operations.html">
+     Array Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-09-Systems-of-Linear-Equations.html">
+     Systems of Linear Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-10-Summary.html">
+     Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05-11-Review-Questions.html">
+     Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10-Symbolic-Math/10-00-Introduction.html">
+   Symbolic Math
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10-01-SymPy.html">
+     SymPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10-02-Installing-SymPy.html">
+     Installing SymPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10-03-Defining-Variables.html">
+     Defining Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10-04-Expressions-and-Substitutions.html">
+     Expressions and Substitutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10-05-Equations.html">
+     Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10-06-Solving-Equations.html">
+     Solving Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10-07-Solving-Two-Equations-for-Two-Unknowns.html">
+     Solving Two Equations for Two Unknows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10-08-Summary.html">
+     Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10-09-Review-Questions.html">
+     Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition/master?urlpath=tree/src/03-The-Python-REPL/03-07-Review-Questions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/03-The-Python-REPL/03-07-Review-Questions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arithmetic">
+   Arithmetic
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trigonometry">
+   Trigonometry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logarithms-and-exponents">
+   Logarithms and Exponents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-in-calculations">
+   Variables in Calculations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors-explanations-and-solutions">
+   Errors, Explanations, and Solutions
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Review Questions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arithmetic">
+   Arithmetic
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trigonometry">
+   Trigonometry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logarithms-and-exponents">
+   Logarithms and Exponents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-in-calculations">
+   Variables in Calculations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors-explanations-and-solutions">
+   Errors, Explanations, and Solutions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="review-questions">
+<h1>Review Questions<a class="headerlink" href="#review-questions" title="Permalink to this headline">#</a></h1>
+<section id="arithmetic">
+<h2>Arithmetic<a class="headerlink" href="#arithmetic" title="Permalink to this headline">#</a></h2>
+<p>Q03.01 <span class="math notranslate nohighlight">\(2 + \frac{1}{2}\)</span></p>
+<p>Q03.02 <span class="math notranslate nohighlight">\(4 \times 2 + \frac{2}{4}\)</span></p>
+<p>Q03.03 <span class="math notranslate nohighlight">\(\frac{5}{2} \times 3 + 4\)</span></p>
+<p>Q03.04 <span class="math notranslate nohighlight">\(4^2 + 3\)</span></p>
+<p>Q03.05 <span class="math notranslate nohighlight">\(\sqrt{16}\)</span></p>
+<p>Q03.06 <span class="math notranslate nohighlight">\(3^{4-5}\)</span></p>
+<p>Q03.07 <span class="math notranslate nohighlight">\(\frac{1+3+5}{2+4+6}\)</span></p>
+<p>Q03.08 <span class="math notranslate nohighlight">\(1 - 2 + \frac{9}{6} -3 + 5\)</span></p>
+<p>Q03.09 <span class="math notranslate nohighlight">\((3 + 5 -2)^{2/3}\)</span></p>
+<p>Q03.10 <span class="math notranslate nohighlight">\(\frac{5+3}{2 \times 5}\)</span></p>
+<p>Q03.11 <span class="math notranslate nohighlight">\(\sqrt{6^2 + 4}\)</span></p>
+<p>Q03.12 <span class="math notranslate nohighlight">\(1 + 9 \times \frac{8}{4^2} + 1^{3-4} \times \frac{1}{2.5}\)</span></p>
+</section>
+<section id="strings">
+<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">#</a></h2>
+<p>Q03.15 Define the string “Problem”</p>
+<p>Q03.16 Two strings “Problem” and “Solving with Python”. Combine these strings to produce “Problem Solving with Python”. Hint: Don’t forget the space.</p>
+<p>Q03.17 Compare the strings “Problem” and “problem” with the comparison operator <code class="docutils literal notranslate"><span class="pre">==</span></code>. Explain the result.</p>
+<p>Q03.18 Compare the output of the code <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">'1</span> <span class="pre">+</span> <span class="pre">2'</span> <span class="pre">==</span> <span class="pre">'3'</span></code>. Explain why the output is different.</p>
+</section>
+<section id="trigonometry">
+<h2>Trigonometry<a class="headerlink" href="#trigonometry" title="Permalink to this headline">#</a></h2>
+<p>Q03.30 Find the sine of <span class="math notranslate nohighlight">\(0\)</span>, <span class="math notranslate nohighlight">\(\pi/4\)</span>, <span class="math notranslate nohighlight">\(\pi/2\)</span>, <span class="math notranslate nohighlight">\(3\pi/4\)</span>, and <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
+<p>Q03.31 Find the cosine of 0 degrees, 30 degrees, 60 degrees, and 90 degrees.</p>
+<p>Q03.32 Find the tangent of 3/4, 5/12, and -8/6.</p>
+<p>Q03.33 Find the sin of 0.1 radians. Then find the arcsine of the result and see if it equals 0.1 radians.</p>
+<p>Q03.34 The U.S. Forest Service can use trigonometry to find the height of trees. The height of a tree, <span class="math notranslate nohighlight">\(h\)</span> is equal to the distance <span class="math notranslate nohighlight">\(d\)</span> between an observer and the base of the tree multiplied by the tangent of the angle <span class="math notranslate nohighlight">\(\theta\)</span> between looking straight along the ground and looking up at the top of the tree according to the formula:</p>
+<div class="math notranslate nohighlight">
+\[ h = d\tan(\theta) \]</div>
+<p>If a Forest Service ranger is 20 feet away from the base of a douglas fir tree and looks up at a 63 degree angle relative to straight ahead to see the top of the tree, what is the height of the douglas fir tree?</p>
+<p>Q03.35 The tangent of an angle is equal to the sine of the angle divided by the cosine of the angle. Make two calculations, one for the tangent of -29 degrees and another calculation for the sine of -29 degrees divided by the cosine of -29 degrees. Do you observe the same output?</p>
+<p>Q03.36 A simple model of water level based on tides (assuming high tide is at midnight) is:</p>
+<div class="math notranslate nohighlight">
+\[ h = (4.8)\sin(\pi/6)(t+3)+5.1 \]</div>
+<p>Where <span class="math notranslate nohighlight">\(h\)</span> is the water height and <span class="math notranslate nohighlight">\(t\)</span> is the number of hours since midnight. Using this model, calculate the water level <span class="math notranslate nohighlight">\(h\)</span>  at 6am (<span class="math notranslate nohighlight">\(t=6\)</span> hours since midnight).</p>
+<p>Q03.37 The x-component of a force <span class="math notranslate nohighlight">\(F_x\)</span> is equal to the magnitude of the force <span class="math notranslate nohighlight">\(|\vec{F}|\)</span> multiplied by the cosine of the angle <span class="math notranslate nohighlight">\(\theta\)</span> of the force relative to the positive x-axis.</p>
+<div class="math notranslate nohighlight">
+\[ F_x = |\vec{F}|\cos(\theta) \]</div>
+<p>If the magnitude of a force <span class="math notranslate nohighlight">\(|\vec{F}| = 12.4\)</span> and the force acts at <span class="math notranslate nohighlight">\(\theta=110\)</span> degrees relative to the positive x-axis, what is the x-component of the force <span class="math notranslate nohighlight">\(F_x\)</span>?</p>
+<p>Q03.38 The distance <span class="math notranslate nohighlight">\(d\)</span> a free-thrown projectile travels is dependent on the projectile’s initial velocity <span class="math notranslate nohighlight">\(v_0\)</span>, the acceleration due to gravity <span class="math notranslate nohighlight">\(g=9.81 m/s^2\)</span> and the angle <span class="math notranslate nohighlight">\(\theta\)</span> at which the project is launched according to:</p>
+<div class="math notranslate nohighlight">
+\[ d = \frac{{v_0}^2}{g} \sin(2\theta) \]</div>
+<p>If a projectile is launched at a 12 degree angle with an initial velocity of 150 m/s, how far will the projectile travel?</p>
+</section>
+<section id="logarithms-and-exponents">
+<h2>Logarithms and Exponents<a class="headerlink" href="#logarithms-and-exponents" title="Permalink to this headline">#</a></h2>
+<p>Q03.41 Show that the natural log of Euler’s number, <span class="math notranslate nohighlight">\(\ln(e)\)</span>, is equal to one.</p>
+<p>Q03.42 Logarithms turn multiplication into addition. Complete both of the calculations below to see if the expressions are equal to each other:</p>
+<div class="math notranslate nohighlight">
+\[ \log(87.1 \times 210 \times 10^{3}) \]</div>
+<div class="math notranslate nohighlight">
+\[ \log(87.1) + \log(210) + \log(10^{3}) \]</div>
+<p>Q03.43 Logarithms turn exponents into multiplication and multiplication into addition. Complete both of the calculations below to see if the expressions are equal. Remember, Python has a couple of log functions including <code class="docutils literal notranslate"><span class="pre">log()</span></code> and <code class="docutils literal notranslate"><span class="pre">log10()</span></code>.</p>
+<div class="math notranslate nohighlight">
+\[ \log(6.02 \times 10^{23}) \]</div>
+<div class="math notranslate nohighlight">
+\[ 23+\log(6.02) \]</div>
+<p>Q03.44 Python’s math module has the natural log (<span class="math notranslate nohighlight">\(\ln\)</span>) function <code class="docutils literal notranslate"><span class="pre">math.log()</span></code> and the log (base 10) function <code class="docutils literal notranslate"><span class="pre">math.log10()</span></code>. If you want to find the log with an arbitrary base, <span class="math notranslate nohighlight">\(b\)</span>, of a number <span class="math notranslate nohighlight">\(n\)</span>, you can use a ratio of natural logarithms (log base <span class="math notranslate nohighlight">\(e\)</span>) according to:</p>
+<div class="math notranslate nohighlight">
+\[ \log_b(n) = \frac{\ln(n)}{\ln(b)} \]</div>
+<p>Calculate the base 4 logarithm of <span class="math notranslate nohighlight">\(3.9 \times 10^{-9}\)</span></p>
+<div class="math notranslate nohighlight">
+\[ log_{4}(3.9 \times 10^{-9}) \]</div>
+<p>Q03.45 The magnitude of a vector <span class="math notranslate nohighlight">\(|\vec{v}|\)</span> is equal to the square root of the sum of the squares of the vector’s components <span class="math notranslate nohighlight">\(v_x\)</span>, <span class="math notranslate nohighlight">\(v_y\)</span>, and <span class="math notranslate nohighlight">\(v_z\)</span> according to:</p>
+<div class="math notranslate nohighlight">
+\[ |\vec{v}| = \sqrt{{v_x}^2 + {v_y}^2 + {v_z}^2} \]</div>
+<p>What is the magnitude of a vector <span class="math notranslate nohighlight">\(\vec{v}\)</span> that has components <span class="math notranslate nohighlight">\(v_x = 76.3\)</span>, <span class="math notranslate nohighlight">\(v_y = 70.9\)</span>, <span class="math notranslate nohighlight">\(v_z = 93.6\)</span> ?</p>
+<p>Q03.46 Moore’s Law, a relationship that states the number of transistors that fit on a microchip doubles every two years can be modeled as:</p>
+<div class="math notranslate nohighlight">
+\[ P_n = P_0 \times 2^n \]</div>
+<p>Where <span class="math notranslate nohighlight">\(P_0\)</span> is the original number of transistors on a microchip and <span class="math notranslate nohighlight">\(P_n\)</span> is the number of transistors on a microchip after <span class="math notranslate nohighlight">\(n\)</span> number of years since the original microchip.  If the original microchip has 1000 transistors, how many transistors are projected to be on a microchip 40 years later according to Moore’s Law?</p>
+</section>
+<section id="variables-in-calculations">
+<h2>Variables in Calculations<a class="headerlink" href="#variables-in-calculations" title="Permalink to this headline">#</a></h2>
+<p>Q03.71 <span class="math notranslate nohighlight">\(a = 2\)</span>, <span class="math notranslate nohighlight">\(b = 3\)</span>, calculate <span class="math notranslate nohighlight">\(\frac{4}{5}(a^2 - b^3)\)</span></p>
+<p>Q03.72 The area of a circle, <span class="math notranslate nohighlight">\(a\)</span>, is dependent on the circle’s radius, <span class="math notranslate nohighlight">\(r\)</span>, according to:</p>
+<div class="math notranslate nohighlight">
+\[ a=\pi r^2 \]</div>
+<p>What is the area of a circle with radius <span class="math notranslate nohighlight">\(r=4\)</span>?</p>
+<p>Q03.73 The area of a circle, <span class="math notranslate nohighlight">\(a\)</span>, is dependent on the circle’s diameter, <span class="math notranslate nohighlight">\(d\)</span>, according to:</p>
+<div class="math notranslate nohighlight">
+\[ a=\pi (\frac{d}{2})^2 \]</div>
+<p>What is the area of a circle with diameter <span class="math notranslate nohighlight">\(d=6\)</span>?</p>
+<p>Q03.74 The volume of a sphere, <span class="math notranslate nohighlight">\(v\)</span>, is dependent on the sphere’s radius, <span class="math notranslate nohighlight">\(r\)</span>, according to:</p>
+<div class="math notranslate nohighlight">
+\[ v=(\frac{4}{3})\pi r^3 \]</div>
+<p>What is the volume of a sphere with radius <span class="math notranslate nohighlight">\(r=1.5\)</span>?</p>
+<p>Q03.75 The volume of a cylinder, <span class="math notranslate nohighlight">\(v\)</span>, is dependent on the cylinder’s radius, <span class="math notranslate nohighlight">\(r\)</span>, and height, <span class="math notranslate nohighlight">\(h\)</span>, according to:</p>
+<div class="math notranslate nohighlight">
+\[ v=\pi r^2 h \]</div>
+<p>What is the volume of a cylinder with radius <span class="math notranslate nohighlight">\(r=5\)</span> and height <span class="math notranslate nohighlight">\(h=10\)</span> ?</p>
+<p>Q03.76 The surface area of a sphere, <span class="math notranslate nohighlight">\(a_s\)</span> is related to the sphere’s radius, <span class="math notranslate nohighlight">\(r\)</span>, according to:</p>
+<div class="math notranslate nohighlight">
+\[ a_s=4\pi r^2 \]</div>
+<p>What is the surface area <span class="math notranslate nohighlight">\(a_s\)</span> of a sphere with radius <span class="math notranslate nohighlight">\(r=2.5\)</span>?</p>
+<p>Q03.77 The general equation for the distance, <span class="math notranslate nohighlight">\(d\)</span>, that a free falling body travels (neglecting air resistance) is:</p>
+<div class="math notranslate nohighlight">
+\[ d = \frac{1}{2}gt^2 \]</div>
+<p><span class="math notranslate nohighlight">\(g\)</span> is the acceleration due to gravity and <span class="math notranslate nohighlight">\(t\)</span> is the fall time. Assume the acceleration due to gravity <span class="math notranslate nohighlight">\(g = 9.81\)</span>. How far (what distance) will a ball fall in time <span class="math notranslate nohighlight">\(t = 12\)</span>?</p>
+<p>Q03.78 The general equation for the fall time, <span class="math notranslate nohighlight">\(t\)</span>, that a free falling body takes (neglecting air resistance) to cover a distance, <span class="math notranslate nohighlight">\(d\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[t = \sqrt{\frac{d}{0.5g}}\]</div>
+<p><span class="math notranslate nohighlight">\(g\)</span> is the acceleration due to gravity. Assume the acceleration due to gravity <span class="math notranslate nohighlight">\(g = 9.81\)</span>. How long (what time) will it take a base jumper to fall distance <span class="math notranslate nohighlight">\(d = 2000\)</span>?</p>
+<p>Q03.79 The value of an investment <span class="math notranslate nohighlight">\(v\)</span> compounded annually at an interest rate of <span class="math notranslate nohighlight">\(r\%\)</span> after <span class="math notranslate nohighlight">\(n\)</span> years is dependent on the original investment <span class="math notranslate nohighlight">\(P\)</span> according to:</p>
+<div class="math notranslate nohighlight">
+\[ v = P(1 + r/100)^n \]</div>
+<p>If <span class="math notranslate nohighlight">\(P=1000\)</span> dollars at a rate of <span class="math notranslate nohighlight">\(r=7\%\)</span>, what will the value <span class="math notranslate nohighlight">\(v\)</span> be after <span class="math notranslate nohighlight">\(n=20\)</span> years?</p>
+<p>Q03.80 The original principal <span class="math notranslate nohighlight">\(P\)</span> needed to produce a total savings of value <span class="math notranslate nohighlight">\(v\)</span> at a rate of <span class="math notranslate nohighlight">\(r\%\)</span> over <span class="math notranslate nohighlight">\(n\)</span> years is calculated by:</p>
+<div class="math notranslate nohighlight">
+\[ P = \frac{v}{(1+r/100)^n} \]</div>
+<p>What is the principal <span class="math notranslate nohighlight">\(P\)</span> needed to save one million dollars at a rate <span class="math notranslate nohighlight">\(r=10\%\)</span> over <span class="math notranslate nohighlight">\(n=40\)</span> years?</p>
+<p>Q03.81 Electrical power <span class="math notranslate nohighlight">\(P\)</span> is related to current <span class="math notranslate nohighlight">\(I\)</span> and resistance <span class="math notranslate nohighlight">\(R\)</span> according to:</p>
+<div class="math notranslate nohighlight">
+\[ P = I^2R\]</div>
+<p>An electrical load with a resistance <span class="math notranslate nohighlight">\(R = 10,000\)</span> running at a current <span class="math notranslate nohighlight">\(I=0.200\)</span> draws how much power <span class="math notranslate nohighlight">\(P\)</span> ?</p>
+</section>
+<section id="errors-explanations-and-solutions">
+<h2>Errors, Explanations, and Solutions<a class="headerlink" href="#errors-explanations-and-solutions" title="Permalink to this headline">#</a></h2>
+<p>For each of the problems below, run the line of code. Then explain the error in your own words. Give an explanation more specific than <code class="docutils literal notranslate"><span class="pre">invalid</span> <span class="pre">syntax</span></code>. Then suggest and run a line of code that fixes the error.</p>
+<p>Q03.91</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">9</span> <span class="n">x</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>Q03.92</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="mi">2</span><span class="o">/</span><span class="mi">3</span>
+</pre></div>
+</div>
+<p>Q03.93</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span><span class="n">cos</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Q03.94</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">8.31</span> <span class="n">x</span> <span class="mi">10</span><span class="o">^</span><span class="mi">9</span>
+</pre></div>
+</div>
+<p>Q03.95</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="n">e</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Q03.96</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">7</span><span class="o">%</span> <span class="o">+</span> <span class="mi">8</span><span class="o">%</span> <span class="o">+</span> <span class="mi">9</span><span class="o">%</span>
+</pre></div>
+</div>
+<p>Q03.97</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="o">-</span><span class="p">)</span><span class="mf">54.2</span> <span class="o">+</span> <span class="mf">9.2</span>
+</pre></div>
+</div>
+<p>Q03.98</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;5&#39;</span> <span class="o">/</span> <span class="s1">&#39;4&#39;</span>
+</pre></div>
+</div>
+<p>Q03.99</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ln</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="o">-</span> <span class="n">log</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./03-The-Python-REPL"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="03-06-Summary.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Summary</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../04-Data-Types-and-Variables/04-01-Introduction.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data Types and Variables</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Peter D. Kazarinoff<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>&nbsp; This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
