@@ -38,7 +38,7 @@ def build(c):
 @task(help={"deploy": "Set --deploy for deployment on gh-pages"})
 def jb(c, deploy=False):
     print("Building using Jupyter Book...")
-    c.run("jb build --path-output website/ --config templates/jupyter-book/_config.yml --toc templates/jupyter-book/_toc.yml --verbose .")
+    c.run("jb build --path-output website/ --verbose src")
     if deploy:
         c.run("ghp-import -n -p -f website/_build/html")
 

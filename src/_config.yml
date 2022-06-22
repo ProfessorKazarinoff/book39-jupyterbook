@@ -2,7 +2,7 @@
 title: Problem Solving with Python 3.9 Edition
 author: Peter D. Kazarinoff
 only_build_toc_files: true
-logo: templates/jupyter-book/cover.jpg
+logo: .jupyter-book/cover.jpg
 execute:
   execute_notebooks: 'off'
 
@@ -14,7 +14,7 @@ repository:
 #######################################################################################
 # HTML-specific settings
 html:
-  favicon                   : "templates/jupyter-book/favicon.png"  # A path to a favicon image
+  favicon                   : ".jupyter-book/favicon.png"  # A path to a favicon image
   use_edit_page_button      : false
   use_repository_button     : true  # Whether to add a link to your repository button
   use_issues_button         : false  # Whether to add an "open an issue" button
