@@ -1,5 +1,7 @@
-# Problem-Solving-with-Python-39-Edition
+# book39-jupyterbook
 
-Repo for the book: Problem Solving with Python 3.9 Edition by Peter D. Kazarinoff, PhD.
+Test Repo for the book: Problem Solving with Python 3.9 Edition by Peter D. Kazarinoff, PhD.
 
-A print copy of the book will be available soon: [https://www.amazon.com/](https://www.amazon.com/)
+Build test just Jupyter Book
+
+Not for use or distribution
