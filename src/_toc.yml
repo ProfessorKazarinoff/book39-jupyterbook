@@ -1,48 +1,50 @@
 format: jb-book
 root: index
+options:  # The options key will be applied to all chapters, but not sub-sections
+  numbered: 2
 chapters:
-- file: 01-Orientation/01-00-Introduction.ipynb
+- file: 01-Orientation/01.00-Introduction.ipynb
   sections:
-  - file: 01-Orientation/01-01-Why-Python.ipynb
-  - file: 01-Orientation/01-02-The-Anaconda-Distribution-of-Python.ipynb
-  - file: 01-Orientation/01-03-Installing-Anaconda-on-Windows.ipynb
-- file: 03-The-Python-REPL/03-01-Introduction.ipynb
+  - file: 01-Orientation/01.01-Why-Python.ipynb
+  - file: 01-Orientation/01.02-The-Anaconda-Distribution-of-Python.ipynb
+  - file: 01-Orientation/01.03-Installing-Anaconda-on-Windows.ipynb
+- file: 03-The-Python-REPL/03.00-Introduction.ipynb
   sections:
   - file: 03-The-Python-REPL/03.01-Python-as-a-Calculator.ipynb
-  - file: 03-The-Python-REPL/03-03-Variables.ipynb
-  - file: 03-The-Python-REPL/03-04-String-Operations.ipynb
-  - file: 03-The-Python-REPL/03-05-Print-Statements.ipynb
-  - file: 03-The-Python-REPL/03-06-Summary.ipynb
-  - file: 03-The-Python-REPL/03-07-Review-Questions.ipynb
-- file: 04-Data-Types-and-Variables/04-01-Introduction.ipynb
+  - file: 03-The-Python-REPL/03.02-Variables.ipynb
+  - file: 03-The-Python-REPL/03.03-String-Operations.ipynb
+  - file: 03-The-Python-REPL/03.04-Print-Statements.ipynb
+  - file: 03-The-Python-REPL/03.05-Summary.ipynb
+  - file: 03-The-Python-REPL/03.06-Review-Questions.ipynb
+- file: 04-Data-Types-and-Variables/04.01-Introduction.ipynb
   sections:
-  - file: 04-Data-Types-and-Variables/04-02-Numeric-Data-Types.ipynb
-  - file: 04-Data-Types-and-Variables/04-03-Boolean-Data-Type.ipynb
-  - file: 04-Data-Types-and-Variables/04-04-Strings.ipynb
-  - file: 04-Data-Types-and-Variables/04-05-Lists.ipynb
-  - file: 04-Data-Types-and-Variables/04-06-Dictionaries-and-Tuples.ipynb
-  - file: 04-Data-Types-and-Variables/04-07-Summary.ipynb
-  - file: 04-Data-Types-and-Variables/04-08-Review-Questions.ipynb
-- file: 05-NumPy-and-Arrays/05-01-Introduction.ipynb
+  - file: 04-Data-Types-and-Variables/04.02-Numeric-Data-Types.ipynb
+  - file: 04-Data-Types-and-Variables/04.03-Boolean-Data-Type.ipynb
+  - file: 04-Data-Types-and-Variables/04.04-Strings.ipynb
+  - file: 04-Data-Types-and-Variables/04.05-Lists.ipynb
+  - file: 04-Data-Types-and-Variables/04.06-Dictionaries-and-Tuples.ipynb
+  - file: 04-Data-Types-and-Variables/04.07-Summary.ipynb
+  - file: 04-Data-Types-and-Variables/04.08-Review-Questions.ipynb
+- file: 05-NumPy-and-Arrays/05.01-Introduction.ipynb
   sections:
-  - file: 05-NumPy-and-Arrays/05-02-NumPy.ipynb
-  - file: 05-NumPy-and-Arrays/05-03-Installing-NumPy.ipynb
-  - file: 05-NumPy-and-Arrays/05-04-Python-Lists-and-NumPy-Arrays.ipynb
-  - file: 05-NumPy-and-Arrays/05-05-Array-Creation.ipynb
-  - file: 05-NumPy-and-Arrays/05-06-Array-Indexing.ipynb
-  - file: 05-NumPy-and-Arrays/05-07-Array-Slicing.ipynb
-  - file: 05-NumPy-and-Arrays/05-08-Array-Operations.ipynb
-  - file: 05-NumPy-and-Arrays/05-09-Systems-of-Linear-Equations.ipynb
-  - file: 05-NumPy-and-Arrays/05-10-Summary.ipynb
-  - file: 05-NumPy-and-Arrays/05-11-Review-Questions.ipynb
-- file: 10-Symbolic-Math/10-00-Introduction.ipynb
+  - file: 05-NumPy-and-Arrays/05.02-NumPy.ipynb
+  - file: 05-NumPy-and-Arrays/05.03-Installing-NumPy.ipynb
+  - file: 05-NumPy-and-Arrays/05.04-Python-Lists-and-NumPy-Arrays.ipynb
+  - file: 05-NumPy-and-Arrays/05.05-Array-Creation.ipynb
+  - file: 05-NumPy-and-Arrays/05.06-Array-Indexing.ipynb
+  - file: 05-NumPy-and-Arrays/05.07-Array-Slicing.ipynb
+  - file: 05-NumPy-and-Arrays/05.08-Array-Operations.ipynb
+  - file: 05-NumPy-and-Arrays/05.09-Systems-of-Linear-Equations.ipynb
+  - file: 05-NumPy-and-Arrays/05.10-Summary.ipynb
+  - file: 05-NumPy-and-Arrays/05.11-Review-Questions.ipynb
+- file: 10-Symbolic-Math/10.00-Introduction.ipynb
   sections:
-  - file: 10-Symbolic-Math/10-01-SymPy.ipynb
-  - file: 10-Symbolic-Math/10-02-Installing-SymPy.ipynb
-  - file: 10-Symbolic-Math/10-03-Defining-Variables.ipynb
-  - file: 10-Symbolic-Math/10-04-Expressions-and-Substitutions.ipynb
-  - file: 10-Symbolic-Math/10-05-Equations.ipynb
-  - file: 10-Symbolic-Math/10-06-Solving-Equations.ipynb
-  - file: 10-Symbolic-Math/10-07-Solving-Two-Equations-for-Two-Unknowns.ipynb
-  - file: 10-Symbolic-Math/10-08-Summary.ipynb
-  - file: 10-Symbolic-Math/10-09-Review-Questions.ipynb
+  - file: 10-Symbolic-Math/10.01-SymPy.ipynb
+  - file: 10-Symbolic-Math/10.02-Installing-SymPy.ipynb
+  - file: 10-Symbolic-Math/10.03-Defining-Variables.ipynb
+  - file: 10-Symbolic-Math/10.04-Expressions-and-Substitutions.ipynb
+  - file: 10-Symbolic-Math/10.05-Equations.ipynb
+  - file: 10-Symbolic-Math/10.06-Solving-Equations.ipynb
+  - file: 10-Symbolic-Math/10.07-Solving-Two-Equations-for-Two-Unknowns.ipynb
+  - file: 10-Symbolic-Math/10.08-Summary.ipynb
+  - file: 10-Symbolic-Math/10.09-Review-Questions.ipynb
