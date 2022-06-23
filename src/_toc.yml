@@ -2,7 +2,7 @@ format: jb-book
 root: index
 parts:
   - caption: Preface
-    numbered: False  # Only applies to chapters in Part 1.
+    numbered: False  # Only applies to chapters in the Preface
     chapters:
     - file: 00-Preface/00.00-Preface.ipynb
       sections:
