@@ -240,7 +240,7 @@ def merge_notebooks(nb_path_lst):
 
 
 def iter_notebook_paths(src_dir_path):
-    REG_nb = re.compile(r"(\d\d)-(\d\d)-(.*)\.ipynb")
+    REG_nb = re.compile(r"(\d\d).(\d\d)-(.*)\.ipynb")
     REG_nb_dir = re.compile((r"(\d\d)-*"))
     nb_path_lst = []
 
