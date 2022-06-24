@@ -697,7 +697,7 @@ title="Print to PDF"
 <p>Matplotlib plots can be saved as image files using the <code class="docutils literal notranslate"><span class="pre">plt.savefig()</span></code> function.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">plt.savefig()</span></code> function needs to be called right above the <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> line. All the features of the plot must be specified before the plot is saved as an image file. If the figure is saved after the <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> command; the figure will not be saved until the plot window is closed.</p>
 <div class="alert alert-info" role="alert">
-    Calling <tt>plt.savefig()</tt> after calling <tt>plt.show()</tt> can be problematic when building plots in a Jupyter notebook with <tt>%matplotlib inline</tt> enabled.
+Calling <tt>plt.savefig()</tt> after calling <tt>plt.show()</tt> can be problematic when building plots in a Jupyter notebook with <tt>%matplotlib inline</tt> enabled.
 </div><p>A standard <code class="docutils literal notranslate"><span class="pre">savefig()</span></code> command is:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;plot.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
 </pre></div>
