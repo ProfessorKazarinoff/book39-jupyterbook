@@ -1,4 +1,4 @@
-name: book39
+name: book39-latex
 channels:
   - defaults
 dependencies:
