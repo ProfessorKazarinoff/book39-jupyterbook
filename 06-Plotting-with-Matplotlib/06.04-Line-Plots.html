@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Symbolic Math" href="../10-Symbolic-Math/10.00-Introduction.html" />
+    <link rel="next" title="5.5. Saving plots" href="06.05-Saving-Plots.html" />
     <link rel="prev" title="5.3. Installing Matplotlib" href="06.03-Installing%20Matplotlib.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -379,6 +379,21 @@ const thebe_selector_output = ".output, .cell_output"
      5.4. Line Plots
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="06.05-Saving-Plots.html">
+     5.5. Saving plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="06.06-Multi-Line-Plots.html">
+     5.6. Multi-Line Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="06.07-Bar-Charts-and-Pie-Charts.html">
+     5.7. Bar Charts and Pie Charts
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -697,13 +712,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#x-axis-label">
-     x-axis label
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#y-axis-label">
-     y-axis label
+    <a class="reference internal nav-link" href="#axis-labels">
+     Axis labels
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -795,13 +805,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#x-axis-label">
-     x-axis label
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#y-axis-label">
-     y-axis label
+    <a class="reference internal nav-link" href="#axis-labels">
+     Axis labels
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -870,10 +875,10 @@ title="Print to PDF"
                 
   <section id="line-plots">
 <h1><span class="section-number">5.4. </span>Line Plots<a class="headerlink" href="#line-plots" title="Permalink to this headline">#</a></h1>
-<p>Line plots can be created in Python with Matplotlib’s <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> library.</p>
+<p>We will start our work with Matplotlib by creating a line plot. Line plots can be created in Python with Matplotlib’s <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> library.</p>
 <p>To build a line plot, first import Matplotlib.  It is a standard convention to import Matplotlib’s <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> library as <code class="docutils literal notranslate"><span class="pre">plt</span></code>. The <code class="docutils literal notranslate"><span class="pre">plt</span></code> alias will be familiar to other Python programmers.</p>
 <p>If using a Jupyter notebook, include the line <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> after the imports. <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> is a Jupyter notebook magic command which causes Matplotlib plots to display directly inside Jupyter notebook output cells.</p>
-<p>To build our first plot, we will also use NumPy, a numerical computing library for Python. NumPy is typically imported with the alias <code class="docutils literal notranslate"><span class="pre">np</span></code>.</p>
+<p>To build our line plot, we will also use NumPy, a numerical computing library for Python. NumPy is typically imported as the alias <code class="docutils literal notranslate"><span class="pre">np</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -1065,10 +1070,10 @@ title="Print to PDF"
 <td><p>circle</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'v'</span></code></p></td>
-<td><p>triangle_down</p></td>
+<td><p>triangle down</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'^'</span></code></p></td>
-<td><p>triangle_up</p></td>
+<td><p>triangle up</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'8'</span></code></p></td>
 <td><p>octagon</p></td>
@@ -1124,15 +1129,12 @@ title="Print to PDF"
 </pre></div>
 </div>
 </section>
-<section id="x-axis-label">
-<h3>x-axis label<a class="headerlink" href="#x-axis-label" title="Permalink to this headline">#</a></h3>
+<section id="axis-labels">
+<h3>Axis labels<a class="headerlink" href="#axis-labels" title="Permalink to this headline">#</a></h3>
 <p>The x-axis label is shown below the x-axis. The <code class="docutils literal notranslate"><span class="pre">plt.xlabel()</span></code> command accepts a string as an argument.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;My x-axis label&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="y-axis-label">
-<h3>y-axis label<a class="headerlink" href="#y-axis-label" title="Permalink to this headline">#</a></h3>
 <p>The y-axis label is shown to the left of the y-axis. The <code class="docutils literal notranslate"><span class="pre">plt.ylabel()</span></code> command also accepts a string as an argument.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;My y-axis label&#39;</span><span class="p">)</span>
 </pre></div>
@@ -1141,7 +1143,7 @@ title="Print to PDF"
 <section id="legend">
 <h3>Legend<a class="headerlink" href="#legend" title="Permalink to this headline">#</a></h3>
 <p>You can use the <code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code> command to insert a legend on a plot. The legend appears within the plot area, in the upper right corner by default. The <code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code> command accepts a list of strings and optionally accepts a <code class="docutils literal notranslate"><span class="pre">loc=</span> </code> argument to specify the legend location.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;entry1&#39;</span><span class="p">,</span><span class="s1">&#39;entry2&#39;</span><span class="p">],</span> <span class="n">loc</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;entry1&#39;</span><span class="p">,</span><span class="s1">&#39;entry2&#39;</span><span class="p">],</span> <span class="n">loc</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The following are the legend location codes. These numbers need to be placed after <code class="docutils literal notranslate"><span class="pre">loc=</span> </code> in the <code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code> call.</p>
@@ -1219,15 +1221,21 @@ title="Print to PDF"
 <p>Details of each step is explained below.</p>
 <section id="imports">
 <h3>1. Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h3>
-<p>Import <code class="docutils literal notranslate"><span class="pre">matplot.pyplot</span> <span class="pre">as</span> <span class="pre">plt</span></code>, as well as any other modules needed to work with the data such as NumPy or Pandas. If using a Jupyter notebook, include the line <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> in the import section.</p>
+<p>Import <code class="docutils literal notranslate"><span class="pre">matplot.pyplot</span> <span class="pre">as</span> <span class="pre">plt</span></code>, as well as any other modules needed to work with the data such as NumPy or Pandas. If using a Jupyter notebook, include the line <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> in the import section. The common imports and their aliases are shown below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># if using a Jupyter notebook, inlcude:</span>
+<span class="o">%</span> <span class="n">matplotlib</span> <span class="n">inline</span>
+</pre></div>
+</div>
 </section>
 <section id="define-data">
 <h3>2. Define data<a class="headerlink" href="#define-data" title="Permalink to this headline">#</a></h3>
-<p>The plot needs to contain data. Data is defined after the imports. Typically, data for plots is contained in Python lists, NumPy arrays or Pandas dataframes.</p>
+<p>The plot needs to contain data. Data is defined after the imports. Typically, data for plots is contained in Python lists or NumPy arrays.</p>
 </section>
 <section id="plot-data-including-options">
 <h3>3. Plot data including options<a class="headerlink" href="#plot-data-including-options" title="Permalink to this headline">#</a></h3>
-<p>Use <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> to plot the data you defined. Note the <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> line needs to be called before any other plot details are specified. Otherwise, the details have no plot to apply to.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> to plot the data you defined. Note the <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> line needs to be called before any other plot details are specified. Otherwise, the details don’t have a plot to apply to.</p>
 <p>Besides data, the <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> function can include keyword arguments such as:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">linewideth=</span> <span class="pre">&lt;float</span> <span class="pre">or</span> <span class="pre">int&gt;</span></code></p></li>
@@ -1298,7 +1306,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/06.04-Line-Plots_19_0.png" src="../_images/06.04-Line-Plots_19_0.png" />
+<img alt="../_images/06.04-Line-Plots_18_0.png" src="../_images/06.04-Line-Plots_18_0.png" />
 </div>
 </div>
 <p>The result is a plot of the sin function with a red dotted line, axis labels, a title, and a legend.</p>
@@ -1339,10 +1347,10 @@ title="Print to PDF"
             <p class="prev-next-title"><span class="section-number">5.3. </span>Installing Matplotlib</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../10-Symbolic-Math/10.00-Introduction.html" title="next page">
+    <a class='right-next' id="next-link" href="06.05-Saving-Plots.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Symbolic Math</p>
+        <p class="prev-next-title"><span class="section-number">5.5. </span>Saving plots</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
