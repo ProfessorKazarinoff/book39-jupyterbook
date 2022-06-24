@@ -49,6 +49,12 @@ parts:
       - file: 05-NumPy-and-Arrays/05.09-Systems-of-Linear-Equations.ipynb
       - file: 05-NumPy-and-Arrays/05.10-Summary.ipynb
       - file: 05-NumPy-and-Arrays/05.11-Review-Questions.ipynb
+    - file: 06-Plotting-with-Matplotlib/06.00-Plotting-with-Matplotlib.ipynb
+      sections:
+      - file: 06-Plotting-with-Matplotlib/06.01-Introduction.ipynb
+      - file: 06-Plotting-with-Matplotlib/06.02-What-is-Matplotlib.ipynb
+      - file: 06-Plotting-with-Matplotlib/06.03-Installing Matplotlib.ipynb
+      - file: 06-Plotting-with-Matplotlib/06.04-Line-Plots.ipynb
     - file: 10-Symbolic-Math/10.00-Introduction.ipynb
       sections:
       - file: 10-Symbolic-Math/10.01-SymPy.ipynb
