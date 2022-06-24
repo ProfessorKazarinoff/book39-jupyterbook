@@ -11,8 +11,8 @@ repository:
   path_to_book: "src"
   branch: master
 
-#######################################################################################
-# HTML-specific settings
+##########################
+# HTML-specific settings #
 html:
   favicon                   : ".jupyter-book/favicon.png"  # A path to a favicon image
   use_edit_page_button      : false
@@ -25,3 +25,10 @@ html:
   home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
   # baseurl                   : ""  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
   # announcement              : "" # A banner announcement at the top of the site.
+
+############################
+# sphinx-specific settings #
+
+sphinx:
+  config:
+    language: en
