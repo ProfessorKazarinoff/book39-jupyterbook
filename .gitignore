@@ -572,3 +572,6 @@ venv-website/
 .DS_Store
 src/.DS_Store
 templates/.DS_Store
+
+### in case Jupyter Book builds in the src dir
+src/_build/
