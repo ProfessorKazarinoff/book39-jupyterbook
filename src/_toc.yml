@@ -53,11 +53,13 @@ parts:
       sections:
       - file: 06-Plotting-with-Matplotlib/06.01-Introduction.ipynb
       - file: 06-Plotting-with-Matplotlib/06.02-What-is-Matplotlib.ipynb
-      - file: 06-Plotting-with-Matplotlib/06.03-Installing Matplotlib.ipynb
+      - file: 06-Plotting-with-Matplotlib/06.03-Installing-Matplotlib.ipynb
       - file: 06-Plotting-with-Matplotlib/06.04-Line-Plots.ipynb
       - file: 06-Plotting-with-Matplotlib/06.05-Saving-Plots.ipynb
       - file: 06-Plotting-with-Matplotlib/06.06-Multi-Line-Plots.ipynb
       - file: 06-Plotting-with-Matplotlib/06.07-Bar-Charts-and-Pie-Charts.ipynb
+      - file: 06-Plotting-with-Matplotlib/06.08-Error-Bars.ipynb
+      - file: 06-Plotting-with-Matplotlib/06.09-Y-Y-Plots.ipynb
     - file: 10-Symbolic-Math/10.00-Introduction.ipynb
       sections:
       - file: 10-Symbolic-Math/10.01-SymPy.ipynb
