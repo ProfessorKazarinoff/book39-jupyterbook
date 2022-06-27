@@ -9,7 +9,7 @@ execute:
 repository:
   url: https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition  # The URL to your book's repository
   path_to_book: "src"
-  branch: master
+  branch: main
 
 ##########################
 # HTML-specific settings #
