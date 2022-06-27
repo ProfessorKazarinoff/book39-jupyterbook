@@ -38,3 +38,5 @@ sphinx:
 latex:
   latex_documents:
      targetname: "Problem-Solving-with-Python-39-Edition.tex"
+     title: "Problem Solving with Python 3.9 Edition"
+     author: "Peter D. Kazarinoff"
