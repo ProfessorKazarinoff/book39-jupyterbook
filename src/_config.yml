@@ -31,6 +31,14 @@ html:
 sphinx:
   config:
     language: en
+    latex_toplevel_sectioning: 'part'
+    latex_additional_files:
+      - "../templates/latex/copywrite_page.tex"
+      - ".jupyter-book/cover.jpg"
+    latex_elements:
+      extrapackages: "%add by Jupyter Book in _config.yml \n %\\usepackage{mypackagefrom_config.yml}"
+      preamble: "%add by Jupyter Book in _config.yml \n \\usepackage{titlesec} \n \\setcounter{secnumdepth}{1} %only chapter and sections are numbered, subsections and subsubsections are not numbered \n \\setcounter{tocdepth}{1}    %only chapter and sections in TOC, subsections and subsubsections are not in TOC"
+
 
 ####################################
 # latex building specific settings #

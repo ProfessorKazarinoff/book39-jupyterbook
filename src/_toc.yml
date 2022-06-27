@@ -60,6 +60,8 @@ parts:
       - file: 06-Plotting-with-Matplotlib/06.07-Bar-Charts-and-Pie-Charts.ipynb
       - file: 06-Plotting-with-Matplotlib/06.08-Error-Bars.ipynb
       - file: 06-Plotting-with-Matplotlib/06.09-Y-Y-Plots.ipynb
+      - file: 06-Plotting-with-Matplotlib/06.10-Histograms.ipynb
+      - file: 06-Plotting-with-Matplotlib/06.11-Box-Plots-and-Violin-Plots.ipynb
     - file: 10-Symbolic-Math/10.00-Introduction.ipynb
       sections:
       - file: 10-Symbolic-Math/10.01-SymPy.ipynb

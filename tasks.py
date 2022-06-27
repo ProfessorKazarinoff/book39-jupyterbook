@@ -35,12 +35,20 @@ def build(c):
     print("Building...")
     print()
 
+
 @task(help={"deploy": "Set --deploy for deployment on gh-pages"})
 def jb(c, deploy=False):
     print("Building using Jupyter Book...")
     c.run("jb build --path-output website/ --verbose src")
     if deploy:
         c.run("ghp-import -n -p -f website/_build/html")
+
+
+@task(help={"deploy": "Set --deploy for deployment on gh-pages"})
+def jbtex(c, deploy=False):
+    print("Building .tex file using Jupyter Book...")
+    c.run("jb build --path-output pdf/ --builder latex --verbose src")
+
 
 @task(help={"deploy": "Set --deploy for deployment on gh-pages"})
 def website(c, deploy=False):
