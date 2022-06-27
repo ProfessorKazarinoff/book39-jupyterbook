@@ -28,7 +28,6 @@ html:
 
 ############################
 # sphinx-specific settings #
-
 sphinx:
   config:
     language: en
@@ -37,6 +36,6 @@ sphinx:
 # latex building specific settings #
 latex:
   latex_documents:
-     targetname: "Problem-Solving-with-Python-39-Edition.tex"
-     title: "Problem Solving with Python 3.9 Edition"
-     author: "Peter D. Kazarinoff"
+    targetname: "Problem-Solving-with-Python-39-Edition.tex"
+    title: "Problem Solving with Python 3.9 Edition"
+    author: "Peter D. Kazarinoff"
