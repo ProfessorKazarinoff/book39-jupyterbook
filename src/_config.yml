@@ -32,3 +32,9 @@ html:
 sphinx:
   config:
     language: en
+
+####################################
+# latex building specific settings #
+latex:
+  latex_documents:
+     targetname: "Problem-Solving-with-Python-39-Edition.tex"
