@@ -1,4 +1,5 @@
 # _config.yml
+
 title: Problem Solving with Python 3.9 Edition
 author: Peter D. Kazarinoff
 only_build_toc_files: true

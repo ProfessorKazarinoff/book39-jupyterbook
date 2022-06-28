@@ -62,6 +62,10 @@ parts:
       - file: 06-Plotting-with-Matplotlib/06.09-Y-Y-Plots.ipynb
       - file: 06-Plotting-with-Matplotlib/06.10-Histograms.ipynb
       - file: 06-Plotting-with-Matplotlib/06.11-Box-Plots-and-Violin-Plots.ipynb
+      - file: 06-Plotting-with-Matplotlib/06.12-Scatter-Plots.ipynb
+      - file: 06-Plotting-with-Matplotlib/06.13-Plot-Annotations.ipynb
+      - file: 06-Plotting-with-Matplotlib/06.14-Subplots.ipynb
+      - file: 06-Plotting-with-Matplotlib/06.15-Plot-Styles.ipynb
     - file: 10-Symbolic-Math/10.00-Introduction.ipynb
       sections:
       - file: 10-Symbolic-Math/10.01-SymPy.ipynb
