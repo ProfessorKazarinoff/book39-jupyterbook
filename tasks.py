@@ -144,7 +144,39 @@ def pdf(c):
 
 
 def convert_TOC(output_file_path: Path):
-    pass
+    print("Working on taking the Preface and Appendix out of the TOC... function not ready yet")
+    chapter_list_exclude_from_TOC = ["Preface","Appendix"]
+    section_list_exclude_from_TOC = [
+        "Motivation",
+        "Acknowledgmments",
+        "Supporting Materials",
+        "Formatting Convensions",
+        "Errata",
+        "Reserved and Key Words in Python",
+        "ASCII Character Codes",
+        "Virtual Environments",
+        "NumPy Math Functions",
+        "Git and GitHub",
+        "LaTeX Math",
+        "Problem Solving with Python Book Construction",
+        "Contributions",
+        "Cover Artwork",
+        "About the Author",
+    ]
+    # latex_chapter_search_line = "\\" + "chapter" + "{" + f"{chapter}" + "}" + "\\" + "label" + "{" + f"{chapter.lower()}" + "}" "}"
+    # latex_section_search_line = "\\" + "section" + "{" + f"{section}" + "}" + "\\" + "label" + "{" + f"{chapter.lower().replace(" ","-")}" + "}" "}"
+            # \section{ASCII Character Codes}\label{ascii-character-codes}}
+
+    """
+    Put a * by the Preface chapter header and the Appendix chapter header. Follow with a line to add the chapter back to the table of contents.
+
+\chapter*{Preface}\label{preface}
+	\addcontentsline{toc}{chapter}{Preface}
+Also do this with the sections of the preface. So the first section needs to be changed to
+
+ \section*{Motivation}\label{motivation}
+        \addcontentsline{toc}{section}{Motivation}
+    """
 
 
 def export_tex(
