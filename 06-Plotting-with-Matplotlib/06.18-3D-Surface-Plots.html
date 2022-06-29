@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5.8. Error Bars &#8212; Problem Solving with Python 3.9 Edition</title>
+    <title>5.18. 3D Surface Plots &#8212; Problem Solving with Python 3.9 Edition</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.9. Y-Y Plots" href="06.09-Y-Y-Plots.html" />
-    <link rel="prev" title="5.7. Bar Charts and Pie Charts" href="06.07-Bar-Charts-and-Pie-Charts.html" />
+    <link rel="next" title="5.19. Summary" href="06.19-Summary.html" />
+    <link rel="prev" title="5.17. Quiver and Stream Plots" href="06.17-Quiver-and-Stream-Plots.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -393,8 +393,8 @@ const thebe_selector_output = ".output, .cell_output"
      5.7. Bar Charts and Pie Charts
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="06.08-Error-Bars.html">
      5.8. Error Bars
     </a>
    </li>
@@ -443,8 +443,8 @@ const thebe_selector_output = ".output, .cell_output"
      5.17. Quiver and Stream Plots
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.18-3D-Surface-Plots.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      5.18. 3D Surface Plots
     </a>
    </li>
@@ -640,7 +640,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition/main?urlpath=tree/src/06-Plotting-with-Matplotlib/06.08-Error-Bars.ipynb"
+        <a href="https://mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition/main?urlpath=tree/src/06-Plotting-with-Matplotlib/06.18-3D-Surface-Plots.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -696,7 +696,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/06-Plotting-with-Matplotlib/06.08-Error-Bars.ipynb"
+        <a href="../_sources/06-Plotting-with-Matplotlib/06.18-3D-Surface-Plots.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -756,13 +756,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#error-bars-in-bar-plots">
-   Error bars in bar plots
+  <a class="reference internal nav-link" href="#surface-plots">
+   Surface Plots
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#error-bars-in-line-plots">
-   Error bars in line plots
+  <a class="reference internal nav-link" href="#wire-frame-plots">
+   Wire Frame Plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gradient-surface-plots">
+   Gradient Surface Plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#d-surface-plots-with-2d-contour-plot-projections">
+   3D Surface Plots with 2D Contour Plot Projections
   </a>
  </li>
 </ul>
@@ -774,7 +784,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Error Bars</h1>
+                <h1>3D Surface Plots</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -785,13 +795,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#error-bars-in-bar-plots">
-   Error bars in bar plots
+  <a class="reference internal nav-link" href="#surface-plots">
+   Surface Plots
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#error-bars-in-line-plots">
-   Error bars in line plots
+  <a class="reference internal nav-link" href="#wire-frame-plots">
+   Wire Frame Plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gradient-surface-plots">
+   Gradient Surface Plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#d-surface-plots-with-2d-contour-plot-projections">
+   3D Surface Plots with 2D Contour Plot Projections
   </a>
  </li>
 </ul>
@@ -804,92 +824,53 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="error-bars">
-<h1><span class="section-number">5.8. </span>Error Bars<a class="headerlink" href="#error-bars" title="Permalink to this headline">#</a></h1>
-<p>Matplotlib line plots and bar charts can include error bars. Error bars are useful to problem solvers because error bars show the confidence or precision in a set of measurements or calculated values. Bar charts without error bars give the illusion that a measured or calculated value is known to high precision or high confidence.</p>
-<section id="error-bars-in-bar-plots">
-<h2>Error bars in bar plots<a class="headerlink" href="#error-bars-in-bar-plots" title="Permalink to this headline">#</a></h2>
-<p>To construct a bar plot with error bars, first import Matplotlib. If using a Jupyter notebook, include the line <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code>.</p>
+  <section id="d-surface-plots">
+<h1><span class="section-number">5.18. </span>3D Surface Plots<a class="headerlink" href="#d-surface-plots" title="Permalink to this headline">#</a></h1>
+<p>3D surface plots can be created with Matplotlib.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">axes3d</span></code> submodule included in Matplotlib’s <code class="docutils literal notranslate"><span class="pre">mpl_toolkits.mplot3d</span></code> toolkit provides the methods necessary to create 3D surface plots with Python.</p>
+<section id="surface-plots">
+<h2>Surface Plots<a class="headerlink" href="#surface-plots" title="Permalink to this headline">#</a></h2>
+<p>Surface plots are created with Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.plot_surface()</span></code> method. By default, surface plots are a single color. The general format of Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.plot_surface()</span></code> method is below.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ax.plot_surface(X, Y, Z)
+</pre></div>
+</div>
+<p>Where <code class="docutils literal notranslate"><span class="pre">X</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span></code> are 2D array of x and y points and <code class="docutils literal notranslate"><span class="pre">Z</span></code> is a 2D array of heights.</p>
+<p>An example of a 3D surface plot is in the next code section. Note how the keyword argument <code class="docutils literal notranslate"> <span class="pre">projection='3d'</span></code> is included in the <code class="docutils literal notranslate"><span class="pre">fig.add_subplot()</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="c1"># if using a Jupyter notebook, include</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1">#if using a Jupyter notebook, include:</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
-</pre></div>
-</div>
-</div>
-</div>
-<p>We’ll apply error bars to the Coefficient of Thermal Expansion data used in a previous section. First the data is stored in three NumPy arrays. Then the mean or average of each array is calculated. The mean of each array will be the height of the bars in the bar plot. Next, the standard deviation of each array is calculated using NumPy’s <code class="docutils literal notranslate"><span class="pre">np.std()</span></code> function. The standard deviation will be the height of the error bars. Finally, a couple lists are created that correspond to the bar labels (<code class="docutils literal notranslate"><span class="pre">labels</span></code>), bar positions (<code class="docutils literal notranslate"><span class="pre">x_pos</span></code>), bar heights (<code class="docutils literal notranslate"><span class="pre">CTEs</span></code>), and the error bar heights (<code class="docutils literal notranslate"><span class="pre">error</span></code>).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data</span>
-<span class="n">aluminum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">6.4e-5</span> <span class="p">,</span> <span class="mf">3.01e-5</span> <span class="p">,</span> <span class="mf">2.36e-5</span><span class="p">,</span> <span class="mf">3.0e-5</span><span class="p">,</span> <span class="mf">7.0e-5</span><span class="p">,</span> <span class="mf">4.5e-5</span><span class="p">,</span> <span class="mf">3.8e-5</span><span class="p">,</span>
-                     <span class="mf">4.2e-5</span><span class="p">,</span> <span class="mf">2.62e-5</span><span class="p">,</span> <span class="mf">3.6e-5</span><span class="p">])</span>
-<span class="n">copper</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">4.5e-5</span> <span class="p">,</span> <span class="mf">1.97e-5</span> <span class="p">,</span> <span class="mf">1.6e-5</span><span class="p">,</span> <span class="mf">1.97e-5</span><span class="p">,</span> <span class="mf">4.0e-5</span><span class="p">,</span> <span class="mf">2.4e-5</span><span class="p">,</span> <span class="mf">1.9e-5</span><span class="p">,</span> 
-                   <span class="mf">2.41e-5</span> <span class="p">,</span> <span class="mf">1.85e-5</span><span class="p">,</span> <span class="mf">3.3e-5</span> <span class="p">])</span>
-<span class="n">steel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">3.3e-5</span> <span class="p">,</span> <span class="mf">1.2e-5</span> <span class="p">,</span> <span class="mf">0.9e-5</span><span class="p">,</span> <span class="mf">1.2e-5</span><span class="p">,</span> <span class="mf">1.3e-5</span><span class="p">,</span> <span class="mf">1.6e-5</span><span class="p">,</span> <span class="mf">1.4e-5</span><span class="p">,</span> 
-                  <span class="mf">1.58e-5</span><span class="p">,</span> <span class="mf">1.32e-5</span> <span class="p">,</span> <span class="mf">2.1e-5</span><span class="p">])</span>
 
-<span class="c1"># Calculate the average</span>
-<span class="n">aluminum_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">aluminum</span><span class="p">)</span>
-<span class="n">copper_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">copper</span><span class="p">)</span>
-<span class="n">steel_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">steel</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">X</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">X</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">Y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="c1"># Calculate the standard deviation</span>
-<span class="n">aluminum_std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">aluminum</span><span class="p">)</span>
-<span class="n">copper_std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">copper</span><span class="p">)</span>
-<span class="n">steel_std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">steel</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
 
-<span class="c1"># Define labels, positions, bar heights and error bar heights</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Aluminum&#39;</span><span class="p">,</span> <span class="s1">&#39;Copper&#39;</span><span class="p">,</span> <span class="s1">&#39;Steel&#39;</span><span class="p">]</span>
-<span class="n">x_pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span>
-<span class="n">CTEs</span> <span class="o">=</span> <span class="p">[</span><span class="n">aluminum_mean</span><span class="p">,</span> <span class="n">copper_mean</span><span class="p">,</span> <span class="n">steel_mean</span><span class="p">]</span>
-<span class="n">error</span> <span class="o">=</span> <span class="p">[</span><span class="n">aluminum_std</span><span class="p">,</span> <span class="n">copper_std</span><span class="p">,</span> <span class="n">steel_std</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Build the plot</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x_pos</span><span class="p">,</span> <span class="n">CTEs</span><span class="p">,</span>
-       <span class="n">yerr</span><span class="o">=</span><span class="n">error</span><span class="p">,</span>
-       <span class="n">align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
-       <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
-       <span class="n">ecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
-       <span class="n">capsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Coefficient of Thermal Expansion ($\degree C^{-1}$)&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">x_pos</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Coefficent of Thermal Expansion (CTE) of Three Metals&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Plot a 3D surface</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">)</span>
 
-<span class="c1"># Save the figure and show</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;bar_plot_with_error_bars.png&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/06.08-Error-Bars_7_0.png" src="../_images/06.08-Error-Bars_7_0.png" />
+<img alt="../_images/06.18-3D-Surface-Plots_4_0.png" src="../_images/06.18-3D-Surface-Plots_4_0.png" />
 </div>
 </div>
-<p>The resulting plot contains three error bars. We can see the standard deviation of the aluminum data is greater than the standard deviation of the steel data by looking at the error by lengths.</p>
 </section>
-<section id="error-bars-in-line-plots">
-<h2>Error bars in line plots<a class="headerlink" href="#error-bars-in-line-plots" title="Permalink to this headline">#</a></h2>
-<p>Error bars can also be added to line plots created with Matplotlib. The <code class="docutils literal notranslate"><span class="pre">ax.errorbar()</span></code> method is used to create a line plot with error bars. The two positional arguments supplied to <code class="docutils literal notranslate"><span class="pre">ax.errorbar()</span></code> are the lists or arrays of x, y data points. The two keyword arguments <code class="docutils literal notranslate"><span class="pre">xerr=</span> </code> and <code class="docutils literal notranslate"><span class="pre">yerr=</span> </code> define the error bar lengths in the x and y directions.</p>
-<p>The general format of Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.errorbar()</span></code> method is below:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>
-            <span class="n">xerr</span><span class="o">=&lt;</span><span class="n">error</span> <span class="n">bar</span> <span class="n">width</span><span class="o">&gt;</span>
-            <span class="n">yerr</span><span class="o">=&lt;</span><span class="n">error</span> <span class="n">bar</span> <span class="n">height</span><span class="o">&gt;</span>
-            <span class="n">fmt</span><span class="o">=&lt;</span><span class="nb">format</span><span class="o">&gt;</span><span class="p">)</span>
+<section id="wire-frame-plots">
+<h2>Wire Frame Plots<a class="headerlink" href="#wire-frame-plots" title="Permalink to this headline">#</a></h2>
+<p>Wire frame plots are similar to surface plots, but on a wire frame plot the entire 3D surface is not shown. Instead, the surface is approximated with “wires” laid over the 3D surface. Wire frame 3D surface plots can be constructed using Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.plot_wireframe()</span></code> method. The general method is below.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ax.plot_wireframe(X, Y, Z, rstride=10, cstride=10)
 </pre></div>
 </div>
-<p>The following code section builds a line plot with horizontal and vertical error bars included on each point in the plot. The error bar widths and heights are created using NumPy’s <code class="docutils literal notranslate"><span class="pre">random_sample</span></code> function.</p>
+<p>Where <code class="docutils literal notranslate"><span class="pre">X</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span></code> are 2D array of x and y points and <code class="docutils literal notranslate"><span class="pre">Z</span></code> is a 2D array of heights. The keyword arguments <code class="docutils literal notranslate"><span class="pre">rstride=</span> </code> and <code class="docutils literal notranslate"><span class="pre">cstride=</span> </code> determine the row step size and the column step size. These keyword arguments control how close together the “wires” are in the wire frame plot.</p>
+<p>The next code section draws two wire frame plots side by side.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -897,28 +878,109 @@ title="Print to PDF"
 <span class="c1"># if using a Jupyter notebook, include:</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
-<span class="n">xerr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random_sample</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">yerr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random_sample</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">X</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">X</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">Y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>
-            <span class="n">xerr</span><span class="o">=</span><span class="n">xerr</span><span class="p">,</span>
-            <span class="n">yerr</span><span class="o">=</span><span class="n">yerr</span><span class="p">,</span>
-            <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;-o&#39;</span><span class="p">)</span>
+<span class="c1"># Plot a basic wireframe</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot_wireframe</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">rstride</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">cstride</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;row step size 10, column step size 10&#39;</span><span class="p">)</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x-axis&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y-axis&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Line plot with error bars&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot_wireframe</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">rstride</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">cstride</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;row step size 20, column step size 20&#39;</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/06.08-Error-Bars_11_0.png" src="../_images/06.08-Error-Bars_11_0.png" />
+<img alt="../_images/06.18-3D-Surface-Plots_7_0.png" src="../_images/06.18-3D-Surface-Plots_7_0.png" />
+</div>
+</div>
+</section>
+<section id="gradient-surface-plots">
+<h2>Gradient Surface Plots<a class="headerlink" href="#gradient-surface-plots" title="Permalink to this headline">#</a></h2>
+<p>Gradient surface plots combine a 3D surface plot with a 2D contour plot. In a gradient surface plot, the 3D surface is colored like a 2D contour plot. High parts of the surface contain a different color than low parts of the surface. The general method call is below. Note the <code class="docutils literal notranslate"><span class="pre">cmap=</span> </code> keyword argument.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>surf = ax.plot_surface(X, Y, Z, 
+                        cmap=&lt;color map&gt;,
+                        linewidth=0,
+                        antialiased=False)
+</pre></div>
+</div>
+<p>The keyword argument <code class="docutils literal notranslate"><span class="pre">cmap=&lt;color</span> <span class="pre">map&gt;</span></code> assigns the colors to the surface. There is a wide array of color map options in Matplotlib. Options include <code class="docutils literal notranslate"><span class="pre">'coolwarm'</span></code>, <code class="docutils literal notranslate"><span class="pre">'gist_earth'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'ocean'</span></code>. Find all of Matplotlib’s colormaps in the Matplotlib documentation at <a class="reference external" href="https://matplotlib.org/tutorials/colors/colormaps.html">matplotlib.org/tutorials/colors/colormaps</a>. A color bar can be added along side the plot by calling the <code class="docutils literal notranslate"><span class="pre">fig.colorbar()</span></code> method and passing in the surface plot object.</p>
+<p>The next code section builds a gradient surface plot using the <code class="docutils literal notranslate"><span class="pre">'gist_earth'</span></code> color map.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># if using a Jupyter notebook, include:</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">X</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">X</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">Y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">mycmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;gist_earth&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;gist_earth color map&#39;</span><span class="p">)</span>
+<span class="n">surf1</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">mycmap</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">surf1</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/06.18-3D-Surface-Plots_10_0.png" src="../_images/06.18-3D-Surface-Plots_10_0.png" />
+</div>
+</div>
+</section>
+<section id="d-surface-plots-with-2d-contour-plot-projections">
+<h2>3D Surface Plots with 2D Contour Plot Projections<a class="headerlink" href="#d-surface-plots-with-2d-contour-plot-projections" title="Permalink to this headline">#</a></h2>
+<p>3D Surface plots created with Matplotlib can be projected onto 2D surfaces. Below is a code section that creates a 3D surface plot. The projections of the 3D surface are visualized on 2D contour plots.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">axes3d</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">X</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">X</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">Y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+
+<span class="n">surf</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">rstride</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">cstride</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">ocean</span><span class="p">)</span>
+<span class="n">cset</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">zdir</span><span class="o">=</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">Z</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">ocean</span><span class="p">)</span>
+<span class="n">cset</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">zdir</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">offset</span><span class="o">=-</span><span class="mi">5</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">ocean</span><span class="p">)</span>
+<span class="n">cset</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">zdir</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">ocean</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">surf</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlim</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">Z</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">Z</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;3D surface with 2D contour plot projections&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/06.18-3D-Surface-Plots_13_0.png" src="../_images/06.18-3D-Surface-Plots_13_0.png" />
 </div>
 </div>
 </section>
@@ -951,17 +1013,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="06.07-Bar-Charts-and-Pie-Charts.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="06.17-Quiver-and-Stream-Plots.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5.7. </span>Bar Charts and Pie Charts</p>
+            <p class="prev-next-title"><span class="section-number">5.17. </span>Quiver and Stream Plots</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="06.09-Y-Y-Plots.html" title="next page">
+    <a class='right-next' id="next-link" href="06.19-Summary.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.9. </span>Y-Y Plots</p>
+        <p class="prev-next-title"><span class="section-number">5.19. </span>Summary</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
