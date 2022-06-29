@@ -67,6 +67,7 @@ parts:
       - file: 06-Plotting-with-Matplotlib/06.14-Subplots.ipynb
       - file: 06-Plotting-with-Matplotlib/06.15-Plot-Styles.ipynb
       - file: 06-Plotting-with-Matplotlib/06.16-Contour-Plots.ipynb
+      - file: 06-Plotting-with-Matplotlib/06.17-Quiver-and-Stream-Plots.ipynb
     - file: 10-Symbolic-Math/10.00-Introduction.ipynb
       sections:
       - file: 10-Symbolic-Math/10.01-SymPy.ipynb
