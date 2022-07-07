@@ -70,6 +70,7 @@ parts:
       - file: 06-Plotting-with-Matplotlib/06.17-Quiver-and-Stream-Plots.ipynb
       - file: 06-Plotting-with-Matplotlib/06.18-3D-Surface-Plots.ipynb
       - file: 06-Plotting-with-Matplotlib/06.19-Summary.ipynb
+      - file: 06-Plotting-with-Matplotlib/06.20-Review-Questions.ipynb
     - file: 10-Symbolic-Math/10.00-Introduction.ipynb
       sections:
       - file: 10-Symbolic-Math/10.01-SymPy.ipynb
