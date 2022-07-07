@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5.2. What is Matplotlib? &#8212; Problem Solving with Python 3.9 Edition</title>
+    <title>5.20. Review Questions &#8212; Problem Solving with Python 3.9 Edition</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,11 +51,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.3. Installing Matplotlib" href="06.03-Installing-Matplotlib.html" />
-    <link rel="prev" title="5.1. Introduction" href="06.01-Introduction.html" />
+    <link rel="next" title="6. Symbolic Math" href="../10-Symbolic-Math/10.00-Introduction.html" />
+    <link rel="prev" title="5.19. Summary" href="06.19-Summary.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -363,8 +365,8 @@ const thebe_selector_output = ".output, .cell_output"
      5.1. Introduction
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="06.02-What-is-Matplotlib.html">
      5.2. What is Matplotlib?
     </a>
    </li>
@@ -453,8 +455,8 @@ const thebe_selector_output = ".output, .cell_output"
      5.19. Summary
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.20-Review-Questions.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      5.20. Review Questions
     </a>
    </li>
@@ -645,7 +647,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition/main?urlpath=tree/src/06-Plotting-with-Matplotlib/06.02-What-is-Matplotlib.ipynb"
+        <a href="https://mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition/main?urlpath=tree/src/06-Plotting-with-Matplotlib/06.20-Review-Questions.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -701,7 +703,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/06-Plotting-with-Matplotlib/06.02-What-is-Matplotlib.ipynb"
+        <a href="../_sources/06-Plotting-with-Matplotlib/06.20-Review-Questions.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -761,8 +763,28 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-use-matplotlib">
-   Why use Matplotlib?
+  <a class="reference internal nav-link" href="#line-plots">
+   Line plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bar-charts-and-pie-charts">
+   Bar Charts and Pie Charts
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#histograms-box-plots-and-violin-plots">
+   Histograms, Box Plots, and Violin Plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scatter-plots">
+   Scatter Plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subplots">
+   Subplots
   </a>
  </li>
 </ul>
@@ -774,7 +796,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>What is Matplotlib?</h1>
+                <h1>Review Questions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -785,8 +807,28 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-use-matplotlib">
-   Why use Matplotlib?
+  <a class="reference internal nav-link" href="#line-plots">
+   Line plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bar-charts-and-pie-charts">
+   Bar Charts and Pie Charts
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#histograms-box-plots-and-violin-plots">
+   Histograms, Box Plots, and Violin Plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scatter-plots">
+   Scatter Plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subplots">
+   Subplots
   </a>
  </li>
 </ul>
@@ -799,12 +841,172 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="what-is-matplotlib">
-<h1><span class="section-number">5.2. </span>What is Matplotlib?<a class="headerlink" href="#what-is-matplotlib" title="Permalink to this headline">#</a></h1>
-<p>Matplotlib is a popular Python package used to build plots, charts and graphs. Matplotlib started as a project in the early 2000’s partly to use Python to visualize the electronic signals in the brains of epilepsy patients. Matplotlib’s creator, John D. Hunter, was a neurobiologist. He was looking for a way to replicate MATLAB’s plotting capability with Python. In addition to starting Matplotlib, Dr. Hunter was part of the founding group that created Numfocus. The Numfocus is a group that oversees some major Python projects including Matplotlib, NumPy, Pandas, and Jupyter.</p>
-<section id="why-use-matplotlib">
-<h2>Why use Matplotlib?<a class="headerlink" href="#why-use-matplotlib" title="Permalink to this headline">#</a></h2>
-<p>Matplotlib is useful for creating static 2D plots, the kind of plots included in scientific publications and presentations. Almost any plot created in Microsoft Excel can be created with Matplotlib. Matplotlib can also be used to make 3D plots and animatated plots.</p>
+  <section id="review-questions">
+<h1><span class="section-number">5.20. </span>Review Questions<a class="headerlink" href="#review-questions" title="Permalink to this headline">#</a></h1>
+<section id="line-plots">
+<h2>Line plots<a class="headerlink" href="#line-plots" title="Permalink to this headline">#</a></h2>
+<p>Q06.01 Create a plot of the function <span class="math notranslate nohighlight">\(y=\cos(x)\)</span> from <span class="math notranslate nohighlight">\(x = -2\pi\)</span> to <span class="math notranslate nohighlight">\(2\pi\)</span></p>
+<p>Q06.02 Create a plot of the function <span class="math notranslate nohighlight">\(y=\frac{1}{2}{e^x}\)</span> from <span class="math notranslate nohighlight">\(x = 0\)</span> to <span class="math notranslate nohighlight">\(5\)</span></p>
+<p>Q06.03 Create a plot of the function <span class="math notranslate nohighlight">\(y=\sqrt{2x}\)</span> from <span class="math notranslate nohighlight">\(x = 1\)</span> to <span class="math notranslate nohighlight">\(10\)</span></p>
+<p>Q06.04 Create a plot of the function <span class="math notranslate nohighlight">\(y=mx+b\)</span>, where <span class="math notranslate nohighlight">\(m=-1\)</span> and <span class="math notranslate nohighlight">\(b=-4\)</span>. Limit the plot to values of <span class="math notranslate nohighlight">\(x=-5\)</span> to <span class="math notranslate nohighlight">\(5\)</span>.</p>
+<p>Q06.05 Create a plot of the function <span class="math notranslate nohighlight">\(y=ax^2+bx+c\)</span>, where <span class="math notranslate nohighlight">\(a=1/2\)</span>, <span class="math notranslate nohighlight">\(b=-1/3\)</span> and <span class="math notranslate nohighlight">\(c=4\)</span>. Limit the plot to values of <span class="math notranslate nohighlight">\(x=-10\)</span> to <span class="math notranslate nohighlight">\(10\)</span>.</p>
+<p>Q06.06 Create a plot of the function <span class="math notranslate nohighlight">\(y=x^3+3\)</span> from <span class="math notranslate nohighlight">\(x=-3\)</span> to <span class="math notranslate nohighlight">\(3\)</span>.</p>
+<p>Q06.07 Create a plot of the function <span class="math notranslate nohighlight">\(y=2x^3-9x^2+7x+6\)</span> from <span class="math notranslate nohighlight">\(x=-3\)</span> to <span class="math notranslate nohighlight">\(4\)</span>.</p>
+<p>Q06.08 Plot the data set below with a line plot. Use Matplotlib’s default index system, or create a set of x values from <span class="math notranslate nohighlight">\(x=0\)</span> to <span class="math notranslate nohighlight">\(4\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ y = [-1,\ 2,\ -3,\ 1,\ 0] \]</div>
+<p>Q06.09 Plot the following three functions on the same set of axis. Use a different color line for each function.</p>
+<div class="math notranslate nohighlight">
+\[ x = \cos(t) \]</div>
+<div class="math notranslate nohighlight">
+\[ y = \cos(t/2) \]</div>
+<div class="math notranslate nohighlight">
+\[ z = \frac{1}{2}\cos(t) \]</div>
+<p>Set values of <span class="math notranslate nohighlight">\(t=-4\pi\)</span> to <span class="math notranslate nohighlight">\(4\pi\)</span></p>
+<p>Q06.10 Plot the following three functions on the same set of axis. Specify a thick red line for the <span class="math notranslate nohighlight">\(cos\)</span> function, a thin blue line for the <span class="math notranslate nohighlight">\(sin\)</span> function, and a dashed green line for the <span class="math notranslate nohighlight">\(atan\)</span> function (the arc tangent function).</p>
+<div class="math notranslate nohighlight">
+\[ x = cos(r/10) \]</div>
+<div class="math notranslate nohighlight">
+\[ y = sin(r/4) \]</div>
+<div class="math notranslate nohighlight">
+\[ z = atan(r) \]</div>
+<p>Set values of <span class="math notranslate nohighlight">\(r=-1/2\)</span> to <span class="math notranslate nohighlight">\(1/2\)</span></p>
+</section>
+<section id="bar-charts-and-pie-charts">
+<h2>Bar Charts and Pie Charts<a class="headerlink" href="#bar-charts-and-pie-charts" title="Permalink to this headline">#</a></h2>
+<p>Q06.30 According to the University of Waterloo, world energy consumption in 2006 from the five top energy resources were:</p>
+<ul class="simple">
+<li><p>Natural Gas = 24%</p></li>
+<li><p>Hydro = 6%</p></li>
+<li><p>Nuclear = 6%</p></li>
+<li><p>Oil = 36%</p></li>
+<li><p>Coal = 28%</p></li>
+</ul>
+<p>Build a pie chart of the distribution of world energy consumption based on the data above.</p>
+<p>Q06.31 According to the 2017 Python Developer’s Survey, the computer operating system used by Python Developers breaks down as follows:</p>
+<ul class="simple">
+<li><p>Windows = 49%</p></li>
+<li><p>Linux = 19%</p></li>
+<li><p>MacOS = 15%</p></li>
+<li><p>Other = 17%</p></li>
+</ul>
+<p>Build a pie chart of the computer operating system used by Python Developers in 2017.</p>
+<p>Q06.32 According to the 2021 Python Developer’s Survey, the commercial cloud providers used by Python Developers breaks down as follows:</p>
+<ul class="simple">
+<li><p>Amazon Web Services (AWS) = 50%</p></li>
+<li><p>Google Cloud Platform (GPC) = 32%</p></li>
+<li><p>Microsoft Azure = 23%</p></li>
+<li><p>Heroku = 23%</p></li>
+<li><p>Digital Ocean = 17%</p></li>
+<li><p>Other = 36%</p></li>
+</ul>
+<p>Build a pie chart of the commercial cloud providers used by Python Developers in 2021.</p>
+<p>Q06.33 Re-create the pie chart in Q06.32 that shows which commercial cloud providers are used by Python Developers. Explode out the pie pieces on the chart and add a shadow to each piece.</p>
+<p>Q06.34 Re-create the pie chart in Q06.31 that shows which operating system Python developers use. Explode out the Windows (49%) pie piece to highlight it.</p>
+<p>Q06.35 A list of grades in a college engineering course and the corresponding number of students who earned each grade is shown below:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>grades = [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;D&#39;,&#39;F&#39;]
+
+number_of_students = [3, 5, 8, 1, 2]
+</pre></div>
+</div>
+<p>Build a bar chart of the grade distribution from the college engineering class. Label the bars with grade letters A, B, C, D, and F. Include a title on the chart.</p>
+<p>Q06.36 The proof strength of four different grades of bolts is shown below:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Bolt Type</p></th>
+<th class="head"><p>Proof Strength (psi)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Grade 2</p></td>
+<td><p>33,000 psi</p></td>
+</tr>
+<tr class="row-odd"><td><p>Grade 5</p></td>
+<td><p>74,000 psi</p></td>
+</tr>
+<tr class="row-even"><td><p>Grade 8</p></td>
+<td><p>120,000 psi</p></td>
+</tr>
+<tr class="row-odd"><td><p>Grade A325</p></td>
+<td><p>85,000 psi</p></td>
+</tr>
+</tbody>
+</table>
+<p>Build a bar chart of the proof strength of the four types of bolts. Label the bars by bolt type and include a title and y-axis label with units.</p>
+<p>Q06.37 According to the 2021 Python Developer’s Survey, the main editor / IDE (Integrated Development Environment) used by Python Developers breaks down as follows:</p>
+<ul class="simple">
+<li><p>VS Code = 35%</p></li>
+<li><p>PyCharm = 31%</p></li>
+<li><p>VIM = 7%</p></li>
+<li><p>Jupyter notebook = 3%</p></li>
+<li><p>Sublime Text = 3%</p></li>
+<li><p>Other = 17 %</p></li>
+<li><p>None = 3%</p></li>
+</ul>
+<p>Build a bar chart of the IDE’s used by Python Developers in 2021.</p>
+<p>Q06.38 Create a bar plot of the function <span class="math notranslate nohighlight">\(y=x^3+3\)</span> from <span class="math notranslate nohighlight">\(x=-3\)</span> to <span class="math notranslate nohighlight">\(x=3\)</span> in increments of 1. Label each bar with the corresponding x-value.</p>
+<p>Q06.39 The tensile strength of 4 steel heat treatments is shown in the table below:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Heat Treatment</p></th>
+<th class="head"><p>Tensile Strength (MPa)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Annealed</p></td>
+<td><p>390 MPa</p></td>
+</tr>
+<tr class="row-odd"><td><p>Normalized</p></td>
+<td><p>452 MPa</p></td>
+</tr>
+<tr class="row-even"><td><p>Oil Quench</p></td>
+<td><p>734 MPa</p></td>
+</tr>
+<tr class="row-odd"><td><p>Oil Quench and Temper</p></td>
+<td><p>422 MPa</p></td>
+</tr>
+</tbody>
+</table>
+<p>Build a bar plot of tensile strength vs. heat treatment using the steel heat treatment data above. Label the bars with the type of heat treatment and include a y-axis label with units and a title.</p>
+</section>
+<section id="histograms-box-plots-and-violin-plots">
+<h2>Histograms, Box Plots, and Violin Plots<a class="headerlink" href="#histograms-box-plots-and-violin-plots" title="Permalink to this headline">#</a></h2>
+<p>Q06.50 Plot the histogram of a normal distribution of <code class="docutils literal notranslate"><span class="pre">100</span></code> random numbers. Use NumPy’s <code class="docutils literal notranslate"><span class="pre">np.random.normal()</span></code> function to create the array of numbers. Set a mean <span class="math notranslate nohighlight">\(\mu\)</span> = <code class="docutils literal notranslate"><span class="pre">20</span></code> and a standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span> = <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p>
+<p>Q06.51 NumPy’s <code class="docutils literal notranslate"><span class="pre">np.random.randint()</span></code> function creates an array of random numbers. NumPy’s <code class="docutils literal notranslate"><span class="pre">np.random.randn()</span></code> function creates an array of normally-distributed random numbers. Use both of these functions to create a set of 200 random numbers. Plot both sets of numbers as histograms with Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.hist()</span></code> method. After you construct both histograms, explain how the two NumPy functions <code class="docutils literal notranslate"><span class="pre">np.random.randint()</span></code> and <code class="docutils literal notranslate"><span class="pre">np.random.randn()</span></code> compare.</p>
+<p>Q06.52 Create a box plot with three elements (three “boxes”). Use NumPy’s <code class="docutils literal notranslate"><span class="pre">np.random.randn()</span></code> function to create three arrays of 50 elements. Plot each array as a separate element on the box plot.</p>
+<p>Q06.53 Create a violin plot with five elements (five “violins”). Use NumPy’s <code class="docutils literal notranslate"><span class="pre">np.random.randn()</span></code> function to create five arrays of 50 elements. Plot each array as a separate element on the violin plot.</p>
+<p>Q06.54 Use Matplotlib’s <code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code> command to create a figure with three subplots. In the first subplot, build a historgram. In the second subplot build a box plot. In the third subplot build a violin plot. Plot the same set of 100 normally-distributed random numbers (using NumPy’s <code class="docutils literal notranslate"><span class="pre">np.random.randn()</span></code> function) in each subplot. Include a title above each subplot that shows the plot type: Histogram, Box Plot, or Violin Plot.</p>
+</section>
+<section id="scatter-plots">
+<h2>Scatter Plots<a class="headerlink" href="#scatter-plots" title="Permalink to this headline">#</a></h2>
+<p>Q06.60 Create a scatter plot with the following lists of x and y points.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x = [1,2,3,4,5]
+y = [8,12,4,2,6]
+</pre></div>
+</div>
+<p>Q06.61 Create a scatter plot with the following arrays of x points and y points generated with NumPy’s <code class="docutils literal notranslate"><span class="pre">np.random.randint()</span></code> function.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x = np.random.randint(0, 15, size=20)
+y = np.random.randint(0, 10, size=20)
+</pre></div>
+</div>
+<p>Q06.62 Use the code below to create two arrays of semi-focused random points.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Plot the arrays <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> on a scatter plot. Set the color of the markers on the scatter plot red. Set the marker opacity to <code class="docutils literal notranslate"><span class="pre">0.5</span></code>.</p>
+</section>
+<section id="subplots">
+<h2>Subplots<a class="headerlink" href="#subplots" title="Permalink to this headline">#</a></h2>
+<p>Q06.70 Create a figure that has four subplots all in one row. In each of the subplots, plot the function:</p>
+<div class="math notranslate nohighlight">
+\[ y = e^x \]</div>
+<p>Use the same values of x and y in each subplot. Set the values of x with NumPy’s <code class="docutils literal notranslate"><span class="pre">arange()</span></code> function with the line <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">np.arange(0.01,</span> <span class="pre">20.0,</span> <span class="pre">0.01)</span></code> In the first subplot, use Matplotlibs’s <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code> method. In the second subplot use Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.semilogy()</span></code> method. In the third subplot use Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.semilogx()</span></code> method. In the fourth subplot use Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.loglog()</span></code> method. Label each subplot with a title that shows the plot type.</p>
+<p>Q06.71 Use the data in Q06.31 to create a figure with two subplots. In the first subplot, build a bar chart of the data in Q06.31. In the second subplot, build a pie chart of the data in Q06.31.</p>
 </section>
 </section>
 
@@ -835,17 +1037,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="06.01-Introduction.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="06.19-Summary.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5.1. </span>Introduction</p>
+            <p class="prev-next-title"><span class="section-number">5.19. </span>Summary</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="06.03-Installing-Matplotlib.html" title="next page">
+    <a class='right-next' id="next-link" href="../10-Symbolic-Math/10.00-Introduction.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.3. </span>Installing Matplotlib</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Symbolic Math</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
