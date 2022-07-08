@@ -79,6 +79,7 @@ parts:
       - file: 07-Functions-and-Modules/07.04-Functions-with-Multiple-Arguments.ipynb
       - file: 07-Functions-and-Modules/07.05-Functions-with-Default-Arguments.ipynb
       - file: 07-Functions-and-Modules/07.06-Calling-Functions-from-Other-Files.ipynb
+      - file: 07-Functions-and-Modules/07.07-Docstrings-in-Functions.ipynb
     - file: 10-Symbolic-Math/10.00-Introduction.ipynb
       sections:
       - file: 10-Symbolic-Math/10.01-SymPy.ipynb
