@@ -75,6 +75,7 @@ parts:
       sections:
       - file: 07-Functions-and-Modules/07.01-Introduction.ipynb
       - file: 07-Functions-and-Modules/07.02-Why-Functions.ipynb
+      - file: 07-Functions-and-Modules/07.03-User-defined-Functions.ipynb
     - file: 10-Symbolic-Math/10.00-Introduction.ipynb
       sections:
       - file: 10-Symbolic-Math/10.01-SymPy.ipynb
