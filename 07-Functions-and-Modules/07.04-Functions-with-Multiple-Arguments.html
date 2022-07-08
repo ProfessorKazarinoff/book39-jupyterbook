@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3.2. Numeric Data Types &#8212; Problem Solving with Python 3.9 Edition</title>
+    <title>6.4. Functions with Multiple Arguments &#8212; Problem Solving with Python 3.9 Edition</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,11 +51,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.3. Boolean Data Type" href="04.03-Boolean-Data-Type.html" />
-    <link rel="prev" title="3. Data Types and Variables" href="04.01-Introduction.html" />
+    <link rel="next" title="6.5. Functions with Default Arguments" href="07.05-Functions-with-Default-Arguments.html" />
+    <link rel="prev" title="6.3. User-defined Functions" href="07.03-User-defined-Functions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -239,48 +241,48 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="04.01-Introduction.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../04-Data-Types-and-Variables/04.01-Introduction.html">
    3. Data Types and Variables
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04.02-Numeric-Data-Types.html">
      3.2. Numeric Data Types
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="04.03-Boolean-Data-Type.html">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04.03-Boolean-Data-Type.html">
      3.3. Boolean Data Type
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="04.04-Strings.html">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04.04-Strings.html">
      3.4. Strings
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="04.05-Lists.html">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04.05-Lists.html">
      3.5. Lists
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="04.06-Dictionaries-and-Tuples.html">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04.06-Dictionaries-and-Tuples.html">
      3.6. Dictionaries and Tuples
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="04.07-Summary.html">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04.07-Summary.html">
      3.7. Summary
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="04.08-Review-Questions.html">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04.08-Review-Questions.html">
      3.8. Review Questions
     </a>
    </li>
@@ -460,38 +462,38 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../07-Functions-and-Modules/07.00-Functions-and-Modules.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="07.00-Functions-and-Modules.html">
    6. Functions and Modules
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../07-Functions-and-Modules/07.01-Introduction.html">
+    <a class="reference internal" href="07.01-Introduction.html">
      6.1. Introduction
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../07-Functions-and-Modules/07.02-Why-Functions.html">
+    <a class="reference internal" href="07.02-Why-Functions.html">
      6.2. Why Functions?
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../07-Functions-and-Modules/07.03-User-defined-Functions.html">
+    <a class="reference internal" href="07.03-User-defined-Functions.html">
      6.3. User-defined Functions
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../07-Functions-and-Modules/07.04-Functions-with-Multiple-Arguments.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      6.4. Functions with Multiple Arguments
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../07-Functions-and-Modules/07.05-Functions-with-Default-Arguments.html">
+    <a class="reference internal" href="07.05-Functions-with-Default-Arguments.html">
      6.5. Functions with Default Arguments
     </a>
    </li>
@@ -682,7 +684,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition/main?urlpath=tree/src/04-Data-Types-and-Variables/04.02-Numeric-Data-Types.ipynb"
+        <a href="https://mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition/main?urlpath=tree/src/07-Functions-and-Modules/07.04-Functions-with-Multiple-Arguments.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -738,7 +740,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/04-Data-Types-and-Variables/04.02-Numeric-Data-Types.ipynb"
+        <a href="../_sources/07-Functions-and-Modules/07.04-Functions-with-Multiple-Arguments.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -775,90 +777,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-review-of-variable-assignment-in-python">
-   A review of variable assignment in Python
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#integers">
-   Integers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#floating-point-numbers">
-   Floating Point Numbers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complex-numbers">
-   Complex Numbers
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Numeric Data Types</h1>
+                <h1>Functions with Multiple Arguments</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-review-of-variable-assignment-in-python">
-   A review of variable assignment in Python
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#integers">
-   Integers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#floating-point-numbers">
-   Floating Point Numbers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complex-numbers">
-   Complex Numbers
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -866,99 +801,85 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="numeric-data-types">
-<h1><span class="section-number">3.2. </span>Numeric Data Types<a class="headerlink" href="#numeric-data-types" title="Permalink to this headline">#</a></h1>
-<p>Python has many useful built-in <em>data types</em>. Python variables can store different types of data based on a variable’s data type. A variable’s data type is created dynamically, without the need to explicitly define a data type when the variable is created.</p>
-<p>It is useful for problem solvers to understand a couple of Python’s core data types to write well-constructed code.</p>
-<section id="a-review-of-variable-assignment-in-python">
-<h2>A review of variable assignment in Python<a class="headerlink" href="#a-review-of-variable-assignment-in-python" title="Permalink to this headline">#</a></h2>
-<p>Recall from the previous chapter that variables in Python are defined with the assignment operator, the equals sign <code class="docutils literal notranslate"><span class="pre">=</span></code>.  To define a variable in Python, the variable name is written first, then the assignment operator <code class="docutils literal notranslate"><span class="pre">=</span></code> followed by a value or expression.</p>
-<p>The general syntax to assign a value to variable name is below:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>variable_name = value
+  <section id="functions-with-multiple-arguments">
+<h1><span class="section-number">6.4. </span>Functions with Multiple Arguments<a class="headerlink" href="#functions-with-multiple-arguments" title="Permalink to this headline">#</a></h1>
+<p>Functions can be written to accept multiple input arguments. When multiple arguments are specified, the arguments are listed within the parenthesis after the function name and separated by a comma:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>def function_name(argument1, argument2):
+    &lt;code&gt;
+    return output
 </pre></div>
 </div>
-<p>Variable names in Python must adhere to the following rules:</p>
-<ul class="simple">
-<li><p>variable names must start with a letter</p></li>
-<li><p>variable names can only contain letters, numbers and the underscore character <code class="docutils literal notranslate"><span class="pre">_</span></code></p></li>
-<li><p>variable names can not contain spaces or punctuation</p></li>
-<li><p>variable names are not enclosed in quotes or brackets</p></li>
-</ul>
-<p>Below is a discussion of a few different built-in data types in Python.</p>
-</section>
-<section id="integers">
-<h2>Integers<a class="headerlink" href="#integers" title="Permalink to this headline">#</a></h2>
-<p><em>Integers</em> are one of the Python data types. An integer is a whole number, negative, positive or zero. In Python, integer variables are defined by assigning a whole number to a variable. Python’s <code class="docutils literal notranslate"><span class="pre">type()</span></code> function can be used to determine the data type of a variable.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="go">&lt;class &#39;int&#39;&gt;</span>
+<p>A function that calculates the area of a triangle given the base and height of the triangle would accept two arguments: <code class="docutils literal notranslate"><span class="pre">base</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code>.  The formula for the area <span class="math notranslate nohighlight">\(A\)</span> of a triangle given base <span class="math notranslate nohighlight">\(b\)</span> and height <span class="math notranslate nohighlight">\(h\)</span> is below.</p>
+<div class="math notranslate nohighlight">
+\[ A = \frac{1}{2} b \times h \]</div>
+<p>Let’s name our function <code class="docutils literal notranslate"><span class="pre">triarea</span></code> and accept <code class="docutils literal notranslate"><span class="pre">base</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> as input arguments. The <code class="docutils literal notranslate"><span class="pre">triarea</span></code> function will return a number, the area of a triangle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">triarea</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">base</span> <span class="o">*</span> <span class="n">height</span>
+    <span class="k">return</span> <span class="n">area</span>
 </pre></div>
 </div>
-<p>The output <code class="docutils literal notranslate"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;</span></code> indicates the variable <code class="docutils literal notranslate"><span class="pre">a</span></code> is an integer. Integers can be negative or zero.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="go">&lt;class &#39;int&#39;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-<span class="go">&lt;class &#39;int&#39;&gt;</span>
+</div>
+</div>
+<p>We can test our <code class="docutils literal notranslate"><span class="pre">triarea()</span></code> function with a couple of sets of input arguments.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">triarea</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="floating-point-numbers">
-<h2>Floating Point Numbers<a class="headerlink" href="#floating-point-numbers" title="Permalink to this headline">#</a></h2>
-<p>Floating point numbers or <em>floats</em> are another numeric data type. Floats are decimals, positive, negative, and zero. Floats can also be represented by numbers in scientific notation which contain exponents.</p>
-<p>Both a lower case <code class="docutils literal notranslate"><span class="pre">e</span></code> or an upper case <code class="docutils literal notranslate"><span class="pre">E</span></code> can be used to define floats in scientific notation. In Python, a float can be defined using a decimal point <code class="docutils literal notranslate"><span class="pre">.</span></code> when a variable is assigned.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="mf">6.2</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-<span class="go">&lt;class &#39;float&#39;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.03</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-<span class="go">&lt;class &#39;float&#39;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Na</span> <span class="o">=</span> <span class="mf">6.02e23</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Na</span>
-<span class="go">6.02e+23</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">Na</span><span class="p">)</span>
-<span class="go">&lt;class &#39;float&#39;&gt;</span>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25.0
 </pre></div>
 </div>
-<p>To define a variable as a float instead of an integer, even if the variable is assigned a whole number, a trailing decimal point <code class="docutils literal notranslate"><span class="pre">.</span></code> is used. Note the difference when a decimal point <code class="docutils literal notranslate"><span class="pre">.</span></code> comes after a whole number:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
-<span class="go">&lt;class &#39;int&#39;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="mf">5.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-<span class="go">&lt;class &#39;float&#39;&gt;</span>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">triarea</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">A</span>
 </pre></div>
 </div>
-</section>
-<section id="complex-numbers">
-<h2>Complex Numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this headline">#</a></h2>
-<p>Another useful numeric data type for problem solvers is the <em>complex number</em> data type. A complex number is defined in Python using a real component <code class="docutils literal notranslate"><span class="pre">+</span></code> an imaginary component <code class="docutils literal notranslate"><span class="pre">j</span></code>. The letter <code class="docutils literal notranslate"><span class="pre">j</span></code> must be used to denote the imaginary component. Using the letter <code class="docutils literal notranslate"><span class="pre">i</span></code> to define a complex number returns an error in Python.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">comp</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">comp</span><span class="p">)</span>
-<span class="go">&lt;class &#39;complex&#39;&gt;</span>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note if only one input argument is supplied to the <code class="docutils literal notranslate"><span class="pre">triarea()</span></code> function, an error is returned:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">triarea</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------
+TypeError                           Traceback (most recent call last)
+&lt;ipython-input-4-ddd55ccdd949&gt; in &lt;module&gt;()
+----&gt; 1 triarea(2)
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">comp2</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">2</span><span class="n">i</span>
-<span class="go">              ^</span>
-<span class="go">SyntaxError: invalid syntax</span>
+TypeError: triarea() missing 1 required positional argument: &#39;height&#39;
 </pre></div>
 </div>
-<p>Imaginary numbers can be added to integers and floats.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">intgr</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">intgr</span><span class="p">)</span>
-<span class="go">&lt;class &#39;int&#39;&gt;</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">comp_sum</span> <span class="o">=</span> <span class="n">comp</span> <span class="o">+</span> <span class="n">intgr</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">comp_sum</span><span class="p">)</span>
-<span class="go">(7+2j)</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">flt</span> <span class="o">=</span> <span class="mf">2.1</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">comp_sum</span> <span class="o">=</span> <span class="n">comp</span> <span class="o">+</span> <span class="n">flt</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">comp_sum</span><span class="p">)</span>
-<span class="go">(6.1+2j)</span>
+<p>The variables <code class="docutils literal notranslate"><span class="pre">base</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> are local variables. If <code class="docutils literal notranslate"><span class="pre">base</span></code> or <code class="docutils literal notranslate"><span class="pre">height</span></code> are used outside the function definition, an error is returned.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">triarea</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
+</div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------
+NameError                           Traceback (most recent call last)
+&lt;ipython-input-4-1dd955b62482&gt; in &lt;module&gt;()
+----&gt; 1 triarea(base, height)
+
+NameError: name &#39;base&#39; is not defined
+</pre></div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -974,7 +895,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./04-Data-Types-and-Variables"
+            path: "./07-Functions-and-Modules"
         },
         predefinedOutput: true
     }
@@ -988,17 +909,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="04.01-Introduction.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="07.03-User-defined-Functions.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3. </span>Data Types and Variables</p>
+            <p class="prev-next-title"><span class="section-number">6.3. </span>User-defined Functions</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="04.03-Boolean-Data-Type.html" title="next page">
+    <a class='right-next' id="next-link" href="07.05-Functions-with-Default-Arguments.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.3. </span>Boolean Data Type</p>
+        <p class="prev-next-title"><span class="section-number">6.5. </span>Functions with Default Arguments</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
