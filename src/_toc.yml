@@ -88,6 +88,7 @@ parts:
       - file: 08-If-Else-Try-Except/08.01-Introduction.ipynb
       - file: 08-If-Else-Try-Except/08.02-User-Input.ipynb
       - file: 08-If-Else-Try-Except/08.03-Selection-Statements.ipynb
+      - file: 08-If-Else-Try-Except/08.04-If-Statements.ipynb
     - file: 10-Symbolic-Math/10.00-Introduction.ipynb
       sections:
       - file: 10-Symbolic-Math/10.01-SymPy.ipynb
