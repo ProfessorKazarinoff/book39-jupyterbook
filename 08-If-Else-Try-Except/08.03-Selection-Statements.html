@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>7. If Else Try Except &#8212; Problem Solving with Python 3.9 Edition</title>
+    <title>7.3. Selection Statements &#8212; Problem Solving with Python 3.9 Edition</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7.1. Introduction" href="08.01-Introduction.html" />
-    <link rel="prev" title="6.10. Review Questions" href="../07-Functions-and-Modules/07.10-Review-Questions.html" />
+    <link rel="next" title="8. Symbolic Math" href="../10-Symbolic-Math/10.00-Introduction.html" />
+    <link rel="prev" title="7.2. User Input" href="08.02-User-Input.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -523,7 +523,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="08.00-If-Else-Try-Except.html">
    7. If Else Try Except
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
@@ -531,7 +531,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="08.01-Introduction.html">
      7.1. Introduction
@@ -542,8 +542,8 @@ const thebe_selector_output = ".output, .cell_output"
      7.2. User Input
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="08.03-Selection-Statements.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      7.3. Selection Statements
     </a>
    </li>
@@ -734,7 +734,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition/main?urlpath=tree/src/08-If-Else-Try-Except/08.00-If-Else-Try-Except.ipynb"
+        <a href="https://mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition/main?urlpath=tree/src/08-If-Else-Try-Except/08.03-Selection-Statements.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -790,7 +790,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/08-If-Else-Try-Except/08.00-If-Else-Try-Except.ipynb"
+        <a href="../_sources/08-If-Else-Try-Except/08.03-Selection-Statements.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -839,7 +839,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>If Else Try Except</h1>
+                <h1>Selection Statements</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -851,10 +851,19 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="if-else-try-except">
-<h1><span class="section-number">7. </span>If Else Try Except<a class="headerlink" href="#if-else-try-except" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
+  <section id="selection-statements">
+<h1><span class="section-number">7.3. </span>Selection Statements<a class="headerlink" href="#selection-statements" title="Permalink to this headline">#</a></h1>
+<p>Selection statements are used in programming to select particular blocks of code to run based on a logical condition.  The primary selection statements in Python are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">else</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elif</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">try</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">except</span></code></p></li>
+</ul>
+<p>So far in this text, all of the Python code has either been strictly linear or linear and included functions. A strictly linear program is a program that runs top to bottom. Every line of code in a linear program is executed. In a linear program with functions, the program still runs top to bottom, but the program takes side excursions to execute functions on the way down.</p>
+<p>If this next couple chapters, you will learn to write programs non-linearly. Non-linear programs do not run every line of code top to bottom. In non-linear programs, sections of code may not run based on selection statements like <em>if</em> and <em>try</em>. Non-linear programs can also include loops. Inside loops are sections of code that run multiple times. Loops are defined by repetition structures like <em>for loops</em> and <em>while loops</em>.</p>
+<p>To start our discussion of non-linear programs, we will begin with <em>if statements</em>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -884,17 +893,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../07-Functions-and-Modules/07.10-Review-Questions.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="08.02-User-Input.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6.10. </span>Review Questions</p>
+            <p class="prev-next-title"><span class="section-number">7.2. </span>User Input</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="08.01-Introduction.html" title="next page">
+    <a class='right-next' id="next-link" href="../10-Symbolic-Math/10.00-Introduction.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7.1. </span>Introduction</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Symbolic Math</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
