@@ -564,9 +564,11 @@ pdf/
 .log
 .toc
 
+### Python Environments
 venv-write/
 venv-pdf/
 venv-website/
+venv-jb
 
 ### Because of MacOS
 .DS_Store
