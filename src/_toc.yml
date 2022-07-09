@@ -83,6 +83,9 @@ parts:
       - file: 07-Functions-and-Modules/07.08-Positional-and-Keyword-Arguments.ipynb
       - file: 07-Functions-and-Modules/07.09-Summary.ipynb
       - file: 07-Functions-and-Modules/07.10-Review-Questions.ipynb
+    - file: 08-If-Else-Try-Except/08.00-If-Else-Try-Except.ipynb
+      sections:
+      - file: 08-If-Else-Try-Except/08.01-Introduction.ipynb
     - file: 10-Symbolic-Math/10.00-Introduction.ipynb
       sections:
       - file: 10-Symbolic-Math/10.01-SymPy.ipynb
