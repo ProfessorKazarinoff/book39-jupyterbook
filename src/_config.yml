@@ -32,6 +32,9 @@ html:
 sphinx:
   config:
     language: en
+    html_theme_options:
+      "repository_url": "https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition/"
+      "use_repository_button": True
     latex_toplevel_sectioning: 'part'
     latex_additional_files:
       - "../templates/latex/copywrite_page.tex"
