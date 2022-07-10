@@ -15,6 +15,7 @@ repository:
 ##########################
 # HTML-specific settings #
 html:
+  # announcement              : "Support this work by purchasing a hard copy" # A banner announcement at the top of the site.
   favicon                   : ".jupyter-book/favicon.png"  # A path to a favicon image
   use_edit_page_button      : false
   use_repository_button     : true  # Whether to add a link to your repository button
@@ -25,7 +26,6 @@ html:
   google_analytics_id       : ""  # A GA id that can be used to track book views.
   home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
   # baseurl                   : ""  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
-  # announcement              : "" # A banner announcement at the top of the site.
 
 ############################
 # sphinx-specific settings #
@@ -35,6 +35,7 @@ sphinx:
     html_theme_options:
       "repository_url": "https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition/"
       "use_repository_button": True
+      "announcement": "Support this work by purchasing a hard copy or becoming a GitHub Sponsor"
     latex_toplevel_sectioning: 'part'
     latex_additional_files:
       - "../templates/latex/copywrite_page.tex"
