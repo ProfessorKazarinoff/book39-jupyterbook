@@ -91,6 +91,7 @@ parts:
       - file: 08-If-Else-Try-Except/08.04-If-Statements.ipynb
       - file: 08-If-Else-Try-Except/08.05-If-Else-Statements.ipynb
       - file: 08-If-Else-Try-Except/08.06-Try-Except-Statements.ipynb
+      - file: 08-If-Else-Try-Except/08.07-Flowcharts.ipynb
     - file: 10-Symbolic-Math/10.00-Introduction.ipynb
       sections:
       - file: 10-Symbolic-Math/10.01-SymPy.ipynb
