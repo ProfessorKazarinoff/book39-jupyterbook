@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>7.1. Introduction &#8212; Problem Solving with Python 3.9 Edition</title>
+    <title>7.6. Try-Except Statements &#8212; Problem Solving with Python 3.9 Edition</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7.2. User Input" href="08.02-User-Input.html" />
-    <link rel="prev" title="7. If Else Try Except" href="08.00-If-Else-Try-Except.html" />
+    <link rel="next" title="8. Symbolic Math" href="../10-Symbolic-Math/10.00-Introduction.html" />
+    <link rel="prev" title="7.5. If Else Statements" href="08.05-If-Else-Statements.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -524,8 +524,8 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="08.01-Introduction.html">
      7.1. Introduction
     </a>
    </li>
@@ -549,8 +549,8 @@ const thebe_selector_output = ".output, .cell_output"
      7.5. If Else Statements
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="08.06-Try-Except-Statements.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      7.6. Try-Except Statements
     </a>
    </li>
@@ -768,7 +768,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/08-If-Else-Try-Except/08.01-Introduction.ipynb"
+        <a href="../_sources/08-If-Else-Try-Except/08.06-Try-Except-Statements.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -805,23 +805,80 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntax-errors">
+   Syntax Errors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exception-errors">
+   Exception Errors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#try-except">
+   Try Except
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction</h1>
+                <h1>Try-Except Statements</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntax-errors">
+   Syntax Errors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exception-errors">
+   Exception Errors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#try-except">
+   Try Except
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -829,17 +886,153 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="introduction">
-<h1><span class="section-number">7.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
-<p>In computer programming, selection structures run sections of code based on logical conditions. In this chapter, you will learn about the selections structures if, else, and else if. The end of the chapter introduces another selection structure, the try / except block.</p>
-<p>By the end of this chapter, you will be able to:</p>
-<ul class="simple">
-<li><p>Utilize Python’s <code class="docutils literal notranslate"><span class="pre">input()</span></code> function</p></li>
-<li><p>Use if, else if, and else structures to selectively run sections of code</p></li>
-<li><p>Explain the difference between syntax errors and exception errors</p></li>
-<li><p>Use try-except statements</p></li>
-<li><p>Construct flowcharts to describe the flow of a Python program</p></li>
-</ul>
+  <section id="try-except-statements">
+<h1><span class="section-number">7.6. </span>Try-Except Statements<a class="headerlink" href="#try-except-statements" title="Permalink to this headline">#</a></h1>
+<p>Try-except statements are another selection structure in Python. Like <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code> statements, a try-except statement selects a particular block of code to run based on a condition. Unlike <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code> clauses, try-except blocks are not based on <em>logical conditions</em>. Try-except blocks are based upon whether a line or section of code <em>returns an error</em>.</p>
+<p>Therefore, before we learn how to use try-except statements, we need to understand two types of errors in Python: syntax errors and exception errors.</p>
+<p>Let’s begin by discussing syntax errors.</p>
+<section id="syntax-errors">
+<h2>Syntax Errors<a class="headerlink" href="#syntax-errors" title="Permalink to this headline">#</a></h2>
+<p>A <em>syntax error</em> is a type of error that occur when the syntax in a line of code is not valid Python code. Syntax errors include quotes that are not closed and variable names that do not start with a letter of an underscore.</p>
+<p>The line of code below contains a syntax error. The string <code class="docutils literal notranslate"><span class="pre">&quot;problem</span> <span class="pre">solving</span> </code> is missing a quotation mark <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;problem solving</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;problem solving</span>
+                             <span class="o">^</span>
+<span class="ne">SyntaxError</span>: EOL while scanning string literal
+</pre></div>
+</div>
+</div>
+</div>
+<p>When you encounter syntax errors in Python, the Python interpreter displays <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> and often a cryptic message.</p>
+<p>Even if a line of code does not run when a program is executed, syntax errors in Python are not allowed. For instance, a line of code indented after the if-statement <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">'a'</span> <span class="pre">==</span> <span class="pre">'b':</span></code> will not be executed. But if the indented line of code contains a syntax error, the Python interpreter still flags the error as a syntax error and does not complete the program.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s1">&#39;a&#39;</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="mi">10</span><span class="n">problems</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-2-532ae1edb2a2&gt;&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="mi">10</span><span class="n">problems</span>
+                      <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that you can identify syntax errors, let’s discuss another error type, exception errors.</p>
+</section>
+<section id="exception-errors">
+<h2>Exception Errors<a class="headerlink" href="#exception-errors" title="Permalink to this headline">#</a></h2>
+<p>Syntax errors are lines of code that are not valid Python. Another type of error in Python is an <em>exception error</em>. Exception errors result when a <em>valid</em> line of Python code <em>cannot run</em>.  Lines of code with exception errors contain <em>valid</em> Python code, but the line of code still cannot be executed.</p>
+<p>For example, the statement <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">open('file.txt','r')</span></code> is valid Python code. But if the file <strong><em>file.txt</em></strong> does not exist, Python throws an exception error because  <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">open('file.txt','r')</span></code> cannot be executed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">cc3c27f5a0c3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;file.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Another valid line of Python code is <code class="docutils literal notranslate"><span class="pre">print(a[0])</span></code>, but if <code class="docutils literal notranslate"><span class="pre">a</span></code> is defined as an integer, <code class="docutils literal notranslate"><span class="pre">a</span></code> can not be indexed and an exception error is shown.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mf">0e1</span><span class="n">fa8aeb4c3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+
+<span class="ne">TypeError</span>: &#39;int&#39; object is not subscriptable
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="try-except">
+<h2>Try Except<a class="headerlink" href="#try-except" title="Permalink to this headline">#</a></h2>
+<p>Try except statements can be used to try to run sections of Python code that <em>may</em> return an exception error. The general syntax of a try-except statement is below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">code</span> <span class="n">to</span> <span class="k">try</span><span class="o">&gt;</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">code</span> <span class="n">to</span> <span class="n">run</span> <span class="n">instead</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For instance, if the file <strong><em>file.txt</em></strong> does not exist, a line of code that tries to open <strong><em>file.txt</em></strong> can be included in a <code class="docutils literal notranslate"><span class="pre">try</span></code> statement.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;file does not exist&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>file does not exist
+</pre></div>
+</div>
+</div>
+</div>
+<p>Similarly, we can wrap the code <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">print(a[0])</span></code> in a try block and attempt to run it. If the line <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">print(a[0])</span></code> throws an exception error, the code below <code class="docutils literal notranslate"><span class="pre">except</span></code> runs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;variable a is not a list&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>variable a is not a list
+</pre></div>
+</div>
+</div>
+</div>
+<p>When the Python code in a try block does run and does not throw an exception error, the code in the <code class="docutils literal notranslate"><span class="pre">except</span></code> block does not run.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Solution&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;variable a is not a list&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>S
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that you know a couple of selection structures, we’ll discuss how to diagram programs with flowcharts.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -869,17 +1062,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="08.00-If-Else-Try-Except.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="08.05-If-Else-Statements.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7. </span>If Else Try Except</p>
+            <p class="prev-next-title"><span class="section-number">7.5. </span>If Else Statements</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="08.02-User-Input.html" title="next page">
+    <a class='right-next' id="next-link" href="../10-Symbolic-Math/10.00-Introduction.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7.2. </span>User Input</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Symbolic Math</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
