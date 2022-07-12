@@ -94,6 +94,9 @@ parts:
       - file: 08-If-Else-Try-Except/08.07-Flowcharts.ipynb
       - file: 08-If-Else-Try-Except/08.08-Summary.ipynb
       - file: 08-If-Else-Try-Except/08.09-Review-Questions.ipynb
+    - file: 09-Loops/09.00-Loops.ipynb
+      sections:
+      - file: 09-Loops/09.01-Introduction.ipynb
     - file: 10-Symbolic-Math/10.00-Introduction.ipynb
       sections:
       - file: 10-Symbolic-Math/10.01-SymPy.ipynb
