@@ -97,6 +97,7 @@ parts:
     - file: 09-Loops/09.00-Loops.ipynb
       sections:
       - file: 09-Loops/09.01-Introduction.ipynb
+      - file: 09-Loops/09.02-For-Loops.ipynb
     - file: 10-Symbolic-Math/10.00-Introduction.ipynb
       sections:
       - file: 10-Symbolic-Math/10.01-SymPy.ipynb
