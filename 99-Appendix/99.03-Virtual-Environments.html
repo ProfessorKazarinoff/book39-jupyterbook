@@ -985,31 +985,29 @@ title="Print to PDF"
 <section id="create-a-virtual-environment-with-the-anaconda-prompt">
 <h2>Create a virtual environment with the Anaconda Prompt<a class="headerlink" href="#create-a-virtual-environment-with-the-anaconda-prompt" title="Permalink to this headline">#</a></h2>
 <p>To create the new virtual environment, open the <strong>Anaconda Prompt</strong> and issue the command:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt; conda create --name env_name python=3.7
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt; conda create --name env_name python=3.9
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span></code> command builds the new virtual environment. The <code class="docutils literal notranslate"><span class="pre">--name</span> <span class="pre">env_name</span></code> flag gives the new virtual environment the name <code class="docutils literal notranslate"><span class="pre">env_name</span></code>.  Including <code class="docutils literal notranslate"><span class="pre">python=3.7</span></code> ensures the virtual environment has a current version of Python.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span></code> command builds the new virtual environment. The <code class="docutils literal notranslate"><span class="pre">--name</span> <span class="pre">env_name</span></code> flag gives the new virtual environment the name <code class="docutils literal notranslate"><span class="pre">env_name</span></code>.  Including <code class="docutils literal notranslate"><span class="pre">python=3.9</span></code> ensures the virtual environment has a current version of Python.</p>
 <p>The following output or something similar results:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>The following NEW packages will be INSTALLED:
 
-  ca-certificates    ca-certificates-2019.5.15-0
-  certifi            certifi-2019.6.16-py37_0
-  openssl            openssl-1.1.1c-he774522_1
-  pip                pip-19.1.1-py37_0
-  python             python-3.7.3-h8c8aaf0_1
-  setuptools         setuptools-41.0.1-py37_0
-  sqlite             sqlite-3.28.0-he774522_0
-  vc                 vc-14.1-h0510ff6_4
-  vs2015_runtime     vs2015_runtime-14.15.26706-h3a45250_4
-  wheel              wheel-0.33.4-py37_0
-  wincertstore       wincertstore-0.2-py37_0
+  ca-certificates    ca-certificates-2022.4.26-hecd8cb5_0
+  certifi            certifi-2022.6.15-py39hecd8cb5_0
+  openssl            openssl-1.1.1q-hca72f7f_0
+  pip                pip-22.1.2-py39hecd8cb5_0
+  python             python-3.9.12-hdfd78df_1
+  setuptools         setuptools-61.2.0-py39hecd8cb5_0
+  sqlite             sqlite-3.38.5-h707629a_0
+  tzdata             tzdata-2022a-hda174b7_0
+  wheel              wheel-0.37.1-pyhd3eb1b0_0
 </pre></div>
 </div>
 <p>Type <code class="docutils literal notranslate"><span class="pre">y</span></code> to confirm and create the new virtual environment.</p>
 </section>
 <section id="activate-a-virtual-environment">
 <h2>Activate a virtual environment<a class="headerlink" href="#activate-a-virtual-environment" title="Permalink to this headline">#</a></h2>
-<p>To use the new virtual environment <code class="docutils literal notranslate"><span class="pre">env_name</span></code>, the virtual environment needs to be <em>activated</em>. To activate the environment <code class="docutils literal notranslate"><span class="pre">env_name</span></code>, issue the command:</p>
+<p>To use the new virtual environment <code class="docutils literal notranslate"><span class="pre">env_name</span></code>, the virtual environment first needs to be <em>activated</em>. To activate the environment <code class="docutils literal notranslate"><span class="pre">env_name</span></code>, issue the command:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt; conda activate env_name
 </pre></div>
 </div>
@@ -1041,7 +1039,7 @@ title="Print to PDF"
 </section>
 <section id="list-your-virtual-environments">
 <h2>List your virtual environments<a class="headerlink" href="#list-your-virtual-environments" title="Permalink to this headline">#</a></h2>
-<p>View a list of your virtual environments using the command <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">info</span> <span class="pre">--envs</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">list</span></code>.</p>
+<p>View a list of your virtual environments using the command <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">info</span> <span class="pre">--envs</span></code>.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt; conda activate env_name
 (env_name) &gt; conda info --envs
 
