@@ -98,6 +98,11 @@ parts:
       sections:
       - file: 09-Loops/09.01-Introduction.ipynb
       - file: 09-Loops/09.02-For-Loops.ipynb
+      - file: 09-Loops/09.03-While-Loops.ipynb
+      - file: 09-Loops/09.04-Break-and-Continue.ipynb
+      - file: 09-Loops/09.05-Flowcharts-Describing-Loops.ipynb
+      - file: 09-Loops/09.06-Summary.ipynb
+      - file: 09-Loops/09.07-Review-Questions.ipynb
     - file: 10-Symbolic-Math/10.00-Introduction.ipynb
       sections:
       - file: 10-Symbolic-Math/10.01-SymPy.ipynb
