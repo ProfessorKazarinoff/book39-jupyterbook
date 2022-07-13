@@ -911,7 +911,7 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-commit-and-push-changes-up-to-github-com">
-     Add, commit and push changes up to Github.com
+     Add, commit, and push changes up to Github.com
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -962,7 +962,7 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-commit-and-push-changes-up-to-github-com">
-     Add, commit and push changes up to Github.com
+     Add, commit, and push changes up to Github.com
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -984,8 +984,8 @@ title="Print to PDF"
                 
   <section id="git-and-github">
 <h1>Git and GitHub<a class="headerlink" href="#git-and-github" title="Permalink to this headline">#</a></h1>
-<p><strong>Git</strong> is one of the standard <em>version control</em> systems used by developers to save code and work on code collaboratively as a team. <strong>Git</strong> is a program run on the command line or <strong>Anaconda Prompt</strong>. If you use Windows, the <strong>gitbash</strong> program can be downloaded at <a class="reference external" href="https://git-scm.com/downloads">git-scm.com/downloads</a>. <strong>Git</strong> was created by Linus Torvalds, who also designed the Linux operating system.</p>
-<p><a class="reference external" href="https://github.com/">GitHub.com</a> (now owned by Microsoft) is a website and service used by programmers and open source projects to share code and allow contributors to propose changes to existing code. Other services such as <a class="reference external" href="https://bitbucket.org">BitBucket.org</a> can be integrated with <strong>git</strong> too.</p>
+<p><strong>Git</strong> is one of the standard <em>version control</em> systems used by computer programmers to save code and work on code collaboratively as a team. <strong>Git</strong> is a program run on the command line or <strong>Anaconda Prompt</strong>. If you use Windows, the <strong>gitbash</strong> program can be downloaded at <a class="reference external" href="https://git-scm.com/downloads">git-scm.com/downloads</a>. <strong>Git</strong> was created by Linus Torvalds, who also designed the Linux operating system.</p>
+<p><a class="reference external" href="https://github.com/">GitHub.com</a> (owned by Microsoft) is a website and service used by programmers and open source projects to share code and allow contributors to propose changes to existing code. Other services such as <a class="reference external" href="https://bitbucket.org">BitBucket.org</a> can be integrated with <strong>git</strong> too.</p>
 <p>Both <strong>git</strong> and <a class="reference external" href="https://github.com/">GitHub.com</a> are useful for problem solvers working in teams.</p>
 <p>Before using <strong>git</strong> and <a class="reference external" href="http://GitHub.com">GitHub.com</a>, it is helpful to understand a couple of terms:</p>
 <ul class="simple">
@@ -997,12 +997,12 @@ title="Print to PDF"
 <p>Useful <strong>git</strong> commands are summarized below:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/user/repo.git</span></code> copy a remote repo from <a class="reference external" href="http://GitHub.com">GitHub.com</a> into a local directory</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code> create a new local repo in the current folder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code> create a new local repo in the current directory</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">origin</span> <span class="pre">https://github.com/user/repo.git</span></code> link a local repo to a remote repo on <a class="reference external" href="http://GitHub.com">GitHub.com</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code> add all files and changes to the local repo</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;commit</span> <span class="pre">message&quot;</span></code> commit the changes in the local repo with the message <code class="docutils literal notranslate"><span class="pre">&quot;commit</span> <span class="pre">message&quot;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">master</span></code> push local changes up to the remote repo</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">origin</span> <span class="pre">master</span></code> pull down the version in the remote repo into the local repo</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">main</span></code> push local changes up to the remote repo</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">origin</span> <span class="pre">main</span></code> pull down the version in the remote repo into the local repo</p></li>
 </ul>
 <section id="cloning-a-repo">
 <h2>Cloning a repo<a class="headerlink" href="#cloning-a-repo" title="Permalink to this headline">#</a></h2>
@@ -1017,42 +1017,42 @@ title="Print to PDF"
 </section>
 <section id="creating-and-synching-a-remote-repo-on-github-com-with-a-local-repo">
 <h2>Creating and synching a remote repo on <a class="reference external" href="http://GitHub.com">GitHub.com</a> with a local repo<a class="headerlink" href="#creating-and-synching-a-remote-repo-on-github-com-with-a-local-repo" title="Permalink to this headline">#</a></h2>
-<p>Another common task to complete with <strong>git</strong> is to synch a remote repo on <a class="reference external" href="http://GitHub.com">GitHub.com</a> with a local repo on your local computer. This is useful when you want to keep the files in a particular project synched across multiple computers. Synched remote and local repos are also useful for a group of problem solvers working on the same project. Each team member has access to the same remote repo on <a class="reference external" href="http://GitHub.com">GitHub.com</a> and each team member has the same local repo on their computer.</p>
+<p>Another common task to complete with <strong>git</strong> is to synch a remote repo on <a class="reference external" href="http://GitHub.com">GitHub.com</a> with a local repo on your local computer. This is useful when you want to keep the files in a particular project synced across multiple computers. Synched remote and local repos are also useful for a group of problem solvers working on the same project. Each team member has access to the same remote repo on <a class="reference external" href="http://GitHub.com">GitHub.com</a> and each team member has the same local repo on their computer.</p>
 <section id="create-a-remote-repo-on-github-com">
 <h3>Create a remote repo on <a class="reference external" href="http://GitHub.com">GitHub.com</a><a class="headerlink" href="#create-a-remote-repo-on-github-com" title="Permalink to this headline">#</a></h3>
 <p>First, go to <a class="reference external" href="https://github.com/join">GitHub.com/join</a> and create a new account. Log in and create a new repo. It is a good idea to include a license and a <strong><em>.gitignore</em></strong> file. For a Python project, the <strong><em>.gitignore</em></strong> file for Python is a good start. Two common licenses for open source projects (projects you are willing to share with others) are the <em>GNU General Public License v3.0</em> and the <em>MIT License</em>.</p>
 </section>
 <section id="make-a-new-local-repo-and-link-the-local-repo-to-the-remote-repo-on-github-com">
 <h3>Make a new local repo and link the local repo to the remote repo on <a class="reference external" href="http://GitHub.com">GitHub.com</a><a class="headerlink" href="#make-a-new-local-repo-and-link-the-local-repo-to-the-remote-repo-on-github-com" title="Permalink to this headline">#</a></h3>
-<p>Second, create a local directory and <code class="docutils literal notranslate"><span class="pre">cd</span></code> into it. Initialize a git repo locally in that directory. Then synch the local folder with the remote repo on <a class="reference external" href="http://GitHub.com">GitHub.com</a>.</p>
+<p>Second, create a local directory and <code class="docutils literal notranslate"><span class="pre">cd</span></code> into it. Initialize a git repo locally in that directory. Then sync the local folder with the remote repo on <a class="reference external" href="http://GitHub.com">GitHub.com</a>.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ mkdir newproject
 $ cd newproject
 $ git init
 $ git remote add origin https://github.com/user/repo.git
-$ git pull origin master
+$ git pull origin main
 </pre></div>
 </div>
 </section>
 <section id="add-commit-and-push-changes-up-to-github-com">
-<h3>Add, commit and push changes up to <a class="reference external" href="http://Github.com">Github.com</a><a class="headerlink" href="#add-commit-and-push-changes-up-to-github-com" title="Permalink to this headline">#</a></h3>
+<h3>Add, commit, and push changes up to <a class="reference external" href="http://Github.com">Github.com</a><a class="headerlink" href="#add-commit-and-push-changes-up-to-github-com" title="Permalink to this headline">#</a></h3>
 <p>Third, work on the project locally. For example, you could edit one of the files in the directory <code class="docutils literal notranslate"><span class="pre">newproject</span></code> or create a new file in the directory <code class="docutils literal notranslate"><span class="pre">newproject</span></code>.</p>
 <p>Finally, save your work and commit the changes you made with <strong>git</strong>. Push those changes up to the remote repo on <a class="reference external" href="http://GitHub.com">GitHub.com</a></p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ git add .
 $ git commit -m &quot;commit message&quot;
-$ git push origin master
+$ git push origin main
 </pre></div>
 </div>
 </section>
 <section id="pull-the-most-recent-version-from-github-com-before-each-work-session">
 <h3>Pull the most recent version from <a class="reference external" href="http://GitHub.com">GitHub.com</a> before each work session<a class="headerlink" href="#pull-the-most-recent-version-from-github-com-before-each-work-session" title="Permalink to this headline">#</a></h3>
 <p>If using <strong>git</strong> and <a class="reference external" href="http://GitHub.com">GitHub.com</a>, remember to pull the most recent version of the repo down from <a class="reference external" href="http://GitHub.com">GitHub.com</a> before you make any changes locally. If changes are made locally before the version of the repo on <a class="reference external" href="http://GitHub.com">GitHub.com</a> is synched, the local repo and remote repo will be out of synch.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ git pull origin master
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ git pull origin main
 </pre></div>
 </div>
-<p>After local changes are made, save the changes and push to <a class="reference external" href="http://GitHub.com">GitHub.com</a></p>
+<p>After local changes are made, save the changes and push them up to <a class="reference external" href="http://GitHub.com">GitHub.com</a></p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ git add .
 $ git commit -m &quot;commit message&quot;
-$ git push orign master
+$ git push origin main
 </pre></div>
 </div>
 </section>
