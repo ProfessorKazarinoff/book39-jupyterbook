@@ -1,0 +1,1160 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>8.7. Review Questions &#8212; Problem Solving with Python 3.9 Edition</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9. Symbolic Math" href="../10-Symbolic-Math/10.00-Introduction.html" />
+    <link rel="prev" title="8.6. Summary" href="09.06-Summary.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint">Support this work by purchasing a hard copy or becoming a GitHub Sponsor</div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/cover.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Problem Solving with Python 3.9 Edition</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../00-Preface/00.00-Preface.html">
+   Preface
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00-Preface/00.01-Motivation.html">
+     Motivation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00-Preface/00.02-Acknowledgments.html">
+     Acknowledgments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00-Preface/00.03-Supporting-Materials.html">
+     Supporting Materials
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00-Preface/00.04-Formatting-Conventions.html">
+     Formatting Conventions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00-Preface/00.05-Errata.html">
+     Errata
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Chapters
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01-Orientation/01.00-Orientation.html">
+   1. Orientation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-Orientation/01.00-Introduction.html">
+     1.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-Orientation/01.01-Why-Python.html">
+     1.2. Why Python?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-Orientation/01.02-The-Anaconda-Distribution-of-Python.html">
+     1.3. The Anaconda Distribution of Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-Orientation/01.03-Installing-Anaconda-on-Windows.html">
+     1.4. Installing Anaconda on Windows
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../03-The-Python-REPL/03.00-Introduction.html">
+   2. The Python REPL
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03.01-Python-as-a-Calculator.html">
+     2.2. Python as a Calculator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03.02-Variables.html">
+     2.3. Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03.03-String-Operations.html">
+     2.4. String Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03.04-Print-Statements.html">
+     2.5. Print Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03.05-Summary.html">
+     2.6. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03.06-Review-Questions.html">
+     2.7. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../04-Data-Types-and-Variables/04.01-Introduction.html">
+   3. Data Types and Variables
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04.02-Numeric-Data-Types.html">
+     3.2. Numeric Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04.03-Boolean-Data-Type.html">
+     3.3. Boolean Data Type
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04.04-Strings.html">
+     3.4. Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04.05-Lists.html">
+     3.5. Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04.06-Dictionaries-and-Tuples.html">
+     3.6. Dictionaries and Tuples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04.07-Summary.html">
+     3.7. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04.08-Review-Questions.html">
+     3.8. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../05-NumPy-and-Arrays/05.01-Introduction.html">
+   4. NumPy and Arrays
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05.02-NumPy.html">
+     4.2. NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05.03-Installing-NumPy.html">
+     4.3. Installing NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05.04-Python-Lists-and-NumPy-Arrays.html">
+     4.4. Python Lists and NumPy Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05.05-Array-Creation.html">
+     4.5. Array Creation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05.06-Array-Indexing.html">
+     4.6. Array Indexing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05.07-Array-Slicing.html">
+     4.7. Array Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05.08-Array-Operations.html">
+     4.8. Array Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05.09-Systems-of-Linear-Equations.html">
+     4.9. Systems of Linear Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05.10-Summary.html">
+     4.10. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05.11-Review-Questions.html">
+     4.11. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.00-Plotting-with-Matplotlib.html">
+   5. Plotting with Matplotlib
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.01-Introduction.html">
+     5.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.02-What-is-Matplotlib.html">
+     5.2. What is Matplotlib?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.03-Installing-Matplotlib.html">
+     5.3. Installing Matplotlib
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.04-Line-Plots.html">
+     5.4. Line Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.05-Saving-Plots.html">
+     5.5. Saving plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.06-Multi-Line-Plots.html">
+     5.6. Multi-Line Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.07-Bar-Charts-and-Pie-Charts.html">
+     5.7. Bar Charts and Pie Charts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.08-Error-Bars.html">
+     5.8. Error Bars
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.09-Y-Y-Plots.html">
+     5.9. Y-Y Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.10-Histograms.html">
+     5.10. Histograms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.11-Box-Plots-and-Violin-Plots.html">
+     5.11. Box Plots and Violin Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.12-Scatter-Plots.html">
+     5.12. Scatter Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.13-Plot-Annotations.html">
+     5.13. Plot annotations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.14-Subplots.html">
+     5.14. Subplots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.15-Plot-Styles.html">
+     5.15. Plot Styles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.16-Contour-Plots.html">
+     5.16. Contour Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.17-Quiver-and-Stream-Plots.html">
+     5.17. Quiver and Stream Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.18-3D-Surface-Plots.html">
+     5.18. 3D Surface Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.19-Summary.html">
+     5.19. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.20-Review-Questions.html">
+     5.20. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../07-Functions-and-Modules/07.00-Functions-and-Modules.html">
+   6. Functions and Modules
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07-Functions-and-Modules/07.01-Introduction.html">
+     6.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07-Functions-and-Modules/07.02-Why-Functions.html">
+     6.2. Why Functions?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07-Functions-and-Modules/07.03-User-defined-Functions.html">
+     6.3. User-defined Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07-Functions-and-Modules/07.04-Functions-with-Multiple-Arguments.html">
+     6.4. Functions with Multiple Arguments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07-Functions-and-Modules/07.05-Functions-with-Default-Arguments.html">
+     6.5. Functions with Default Arguments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07-Functions-and-Modules/07.06-Calling-Functions-from-Other-Files.html">
+     6.6. Calling Functions from Other Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07-Functions-and-Modules/07.07-Docstrings-in-Functions.html">
+     6.7. Docstrings in Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07-Functions-and-Modules/07.08-Positional-and-Keyword-Arguments.html">
+     6.8. Positional and Keyword Arguments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07-Functions-and-Modules/07.09-Summary.html">
+     6.9. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07-Functions-and-Modules/07.10-Review-Questions.html">
+     6.10. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../08-If-Else-Try-Except/08.00-If-Else-Try-Except.html">
+   7. If Else Try Except
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08.01-Introduction.html">
+     7.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08.02-User-Input.html">
+     7.2. User Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08.03-Selection-Statements.html">
+     7.3. Selection Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08.04-If-Statements.html">
+     7.4. If Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08.05-If-Else-Statements.html">
+     7.5. If Else Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08.06-Try-Except-Statements.html">
+     7.6. Try-Except Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08.07-Flowcharts.html">
+     7.7. Flowcharts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08.08-Summary.html">
+     7.8. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08.09-Review-Questions.html">
+     7.9. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="09.00-Loops.html">
+   8. Loops
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="09.01-Introduction.html">
+     8.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09.02-For-Loops.html">
+     8.2. For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09.03-While-Loops.html">
+     8.3. While Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09.04-Break-and-Continue.html">
+     8.4. Break and Continue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09.05-Flowcharts-Describing-Loops.html">
+     8.5. Flowcharts Describing Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09.06-Summary.html">
+     8.6. Summary
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     8.7. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10-Symbolic-Math/10.00-Introduction.html">
+   9. Symbolic Math
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10.01-SymPy.html">
+     9.2. SymPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10.02-Installing-SymPy.html">
+     9.3. Installing SymPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10.03-Defining-Variables.html">
+     9.4. Defining Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10.04-Expressions-and-Substitutions.html">
+     9.5. Expressions and Substitutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10.05-Equations.html">
+     9.6. Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10.06-Solving-Equations.html">
+     9.7. Solving Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10.07-Solving-Two-Equations-for-Two-Unknowns.html">
+     9.8. Solving Two Equations for Two Unknows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10.08-Summary.html">
+     9.9. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10.09-Review-Questions.html">
+     9.10. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../99-Appendix/99.00-Appendix.html">
+   Appendix
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99.01-Reserved-and-Key-Words-in-Python.html">
+     Reserved and Keywords in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99.02-ASCII-Character-Codes.html">
+     ASCII Character Codes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99.03-Virtual-Environments.html">
+     Virtual Environments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99.04-NumPy-Math-Functions.html">
+     NumPy Math Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99.05-Git-and-GitHub.html">
+     Git and GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99.06-LaTeX-Math.html">
+     LaTeX Math
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99.07-Problem-Solving-with-Python-Book-Construction.html">
+     Problem Solving with Python Book Construction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99.08-Contributions.html">
+     Contributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99.09-Cover-Artwork.html">
+     Cover Artwork
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99.10-About-the-Author.html">
+     About the Author
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-39-Edition/"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/09-Loops/09.07-Review-Questions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loops">
+   For Loops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-loops">
+   While Loops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors-explanations-and-solutions">
+   Errors, Explanations, and Solutions
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Review Questions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loops">
+   For Loops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-loops">
+   While Loops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors-explanations-and-solutions">
+   Errors, Explanations, and Solutions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="review-questions">
+<h1><span class="section-number">8.7. </span>Review Questions<a class="headerlink" href="#review-questions" title="Permalink to this headline">#</a></h1>
+<section id="for-loops">
+<h2>For Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">#</a></h2>
+<p>Q09.01 Create a for loop to print out the numbers 1 to 10.</p>
+<p>Q09.02 Create a for loop to print out the numbers -1 to -10 starting at -1 and ending at -10.</p>
+<p>Q09.03 Create a for loop to print out all the letters in the word <code class="docutils literal notranslate"><span class="pre">'love'</span></code></p>
+<p>Q09.04 Use a for loop to sum the elements in the list <code class="docutils literal notranslate"><span class="pre">[1,3,5,8,12]</span></code>. Print the sum to the user.</p>
+<p>Q09.05 The first 10 terms of the Fibonacci sequence are below:</p>
+<div class="math notranslate nohighlight">
+\[ 1, \ 1, \ 2, \ 3, \ 5, \ 8, \ 13, \ 21, \ 34, \ 55 \ ... \]</div>
+<p>Create the Fibonacci sequence using a for loop. Print out the first 10 terms of the Fibonacci sequence on one line.</p>
+<p>Q09.06 This problem is about <em>Fizz Buzz</em>, a programming task that is sometimes used in interviews.</p>
+<p>(a) Use a for loop to print out the numbers 1 to 30</p>
+<p>(b) Use a for loop to print out all the numbers 1 to 30, but leave out any number which is divisible by 3, such as 3, 6, and 9.</p>
+<p>(c) Use a for loop to print out all the numbers 1 to 30, but leave out any number which is divisible by 5, such as 5, 10, and 15.</p>
+<p>(d) Use a for loop to print out all the numbers 1 to 30, but insert the word <code class="docutils literal notranslate"><span class="pre">fizz</span></code> for any number that is divisible by 3, insert the word <code class="docutils literal notranslate"><span class="pre">buzz</span></code> for any number that is divisible by 5, and insert the word <code class="docutils literal notranslate"><span class="pre">fizz</span> <span class="pre">buzz</span></code> for any numbers that are both divisible by 3 and 5, like 15.</p>
+<p>Q09.07 Imagine you can see the future of investing and over the next four years, the interest rate of return on investments is going to be 0.02, 0.03, 0.015, 0.06. Prompt the user for an initial investment with Python’s <code class="docutils literal notranslate"><span class="pre">input()</span></code> function and use the formula below to calculate how much the investment will be worth after four years.</p>
+<blockquote>
+<div><p>new balance = old balance + old balance <span class="math notranslate nohighlight">\(\times\)</span> interest rate. Note the first “old balance” is the person’s initial investment.</p>
+</div></blockquote>
+<p>Q09.08 A geometric series is a series that has a common ratio between the terms. The sum of the geometric series that starts at <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> and has a common ratio of <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span> approaches the value 1.</p>
+<p>The formula that shows the sum of a geometric series that approaches 1 is below.</p>
+<div class="math notranslate nohighlight">
+\[ 1 = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + ... \]</div>
+<p>Use the geometric series above to approximate the value of 1 after 10 terms are added. Print out how far off the geometric series approximation is to 1.</p>
+<p>Q09.09 A Taylor Series is an infinite series of mathematical terms when summed together approximate a mathematical function. A Taylor Series can be used to approximate the mathematical functions <span class="math notranslate nohighlight">\(e^x\)</span>, <span class="math notranslate nohighlight">\(sine\)</span>, and <span class="math notranslate nohighlight">\(cosine\)</span>.</p>
+<p>Taylor Series expansion for the function  <span class="math notranslate nohighlight">\(e^x\)</span> is below:</p>
+<div class="math notranslate nohighlight">
+\[  {e^x} = \sum\limits_{n = 0}^\infty  {\frac{{{x^n}}}{{n!}}}  = 1 + x + \frac{{{x^2}}}{{2!}} + \frac{{{x^3}}}{{3!}} + \frac{{{x^4}}}{{4!}} + ... \]</div>
+<p>Write a program that asks a user for a number <span class="math notranslate nohighlight">\(x\)</span>, then calculates <span class="math notranslate nohighlight">\(e^x\)</span> using the Taylor Series expansion. Calculate 20 terms.</p>
+<p>Q09.10 Write a function called <code class="docutils literal notranslate"><span class="pre">lt100()</span></code> that accepts 1 variable as input: a 1D NumPy array.<br />
+The output of <code class="docutils literal notranslate"><span class="pre">lt100()</span></code> will be a single 1D NumPy array.</p>
+<p>Use a for loop to go through the input NumPy array 1 element at a time starting with element <code class="docutils literal notranslate"><span class="pre">0</span></code> going upward.  If the element’s value is less than <code class="docutils literal notranslate"><span class="pre">100</span></code>, put the element into the output 1D NumPy array.  If a value of <code class="docutils literal notranslate"><span class="pre">nan</span></code> (Python’s not a number) is encountered, stop adding elements to the output variable, but do not raise an exception.  If <code class="docutils literal notranslate"><span class="pre">nan</span></code> appears in the first element, the function should return an empty 1D NumPy array, not the <code class="docutils literal notranslate"><span class="pre">None</span></code> object.</p>
+<p>Researching the <code class="docutils literal notranslate"><span class="pre">numpy.append()</span></code> function will help.  Use <code class="docutils literal notranslate"><span class="pre">np.nan</span></code> for testing your code with a <code class="docutils literal notranslate"><span class="pre">nan</span></code> value.</p>
+<p>Q09.11 Write a function called <code class="docutils literal notranslate"><span class="pre">get_bigger()</span></code> that accepts two 1D NumPy arrays for input: <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>.  <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> will contain the same number of elements.  Use a for loop to iterate through both <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> one element at a time. If <code class="docutils literal notranslate"><span class="pre">A's</span></code> current element is greater than <code class="docutils literal notranslate"><span class="pre">B's</span></code>, put <code class="docutils literal notranslate"><span class="pre">A's</span></code> element into the output 1D  NumPy array variable <code class="docutils literal notranslate"><span class="pre">C</span></code>. Otherwise, put the sum of the 2 elements into <code class="docutils literal notranslate"><span class="pre">C</span></code>.  <code class="docutils literal notranslate"><span class="pre">C</span></code> will have the same number of elements as both <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
+<p>For example, if <code class="docutils literal notranslate"><span class="pre">A</span></code> contains <code class="docutils literal notranslate"><span class="pre">[5,</span> <span class="pre">-10,</span> <span class="pre">1]</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> contains <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">-10,</span> <span class="pre">8]</span></code>, then <code class="docutils literal notranslate"><span class="pre">C</span></code> should contain <code class="docutils literal notranslate"><span class="pre">[5,</span> <span class="pre">-20,</span> <span class="pre">9]</span></code>.</p>
+<p>Q09.12 Write a function called <code class="docutils literal notranslate"><span class="pre">str_add()</span></code> that accepts 1 variable as its input: a list of strings.  Use a for loop to add the character <code class="docutils literal notranslate"><span class="pre">'G'</span></code> to the end of each string in the list.  Return the list of altered strings as the only output.</p>
+<p>For example, if the list <code class="docutils literal notranslate"><span class="pre">['hello',</span> <span class="pre">'bye']</span></code> was passed into your function, the output should be <code class="docutils literal notranslate"><span class="pre">['helloG',</span> <span class="pre">'byeG']</span></code>.</p>
+<p>Q09.13 Write a loop that prints out your name 20 times. Each time your name is printed, it should be on a new line.</p>
+<p>Q09.14 Write a loop that prints out “<code class="docutils literal notranslate"><span class="pre">around</span> <span class="pre">and</span> </code>” 20 times. Each time “<code class="docutils literal notranslate"><span class="pre">around</span> <span class="pre">and</span> </code>” is printed, it should be on the same line. As in <code class="docutils literal notranslate"><span class="pre">around</span> <span class="pre">and</span> <span class="pre">around</span> <span class="pre">and</span> <span class="pre">around</span> <span class="pre">and</span> <span class="pre">around</span> <span class="pre">and</span> <span class="pre">around</span> <span class="pre">...</span></code>.</p>
+<p>Q09.15 The Appendix contains a section on ASCII character codes. Use code similar to the code shown in the Appendix to print out the ASCII character code and resulting character for just the letters <code class="docutils literal notranslate"><span class="pre">a</span></code> to <code class="docutils literal notranslate"><span class="pre">z</span></code>, <code class="docutils literal notranslate"><span class="pre">A</span></code> to <code class="docutils literal notranslate"><span class="pre">Z</span></code>, and the numbers <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">9</span></code>.</p>
+<p>Q09.16 Use a for loop to print out the days of the week. Print each day of the week on its own line.</p>
+<p>Q09.17 Use a for loop to print out the spelling of the word <code class="docutils literal notranslate"><span class="pre">mississippi</span></code> with one letter on each line.</p>
+<p>Q09.18 An employee starts with an annual salary of 58 thousand dollars. Print out the employee’s salary each year for five years if the employee receives a 2.5 percent (0.025) raise each year.</p>
+<p>Q09.19 The factorial function is the product of integers between 1 and n. The formula for factorial is below:</p>
+<div class="math notranslate nohighlight">
+\[ n! = 1 \times 2 \times 3 \times 4 \times 5 \times \ ... \ \times n \]</div>
+<p>Write a Python function that contains a for loop to find 5 factorial (5!) and 20 factorial (20!)</p>
+<p>Q09.20 Create a for loop that prints out all of the even numbers between 1 and 100.</p>
+<p>Q09.21 Use Python’s <code class="docutils literal notranslate"><span class="pre">input()</span></code> function to ask a user for an integer between 1 and 10. Then use a for loop to print out all of the multiples of that number between 1 and 100. Use your program to print out all of the multiples of 9 between 1 and 100.</p>
+<p>Q09.22 The Leibniz approximation for the value of <span class="math notranslate nohighlight">\(\pi\)</span> is below.</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\pi}{4} = \frac{1}{1} - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \ ... \]</div>
+<p>Use 15 terms in the Leibniz approximation to calculate the value of <span class="math notranslate nohighlight">\(\pi\)</span>. Compute the error of the Leibniz approximation with 15 terms compared to Pythons <code class="docutils literal notranslate"><span class="pre">math.pi</span></code> function. Hint: <span class="math notranslate nohighlight">\((-1)^i\)</span> will alternate in sign as <span class="math notranslate nohighlight">\(i\)</span> steps through integers.</p>
+<p>Q09.23 Use a for loop to print two columns on each line.  In each line, give an SI prefix, then show which power the prefix corresponds to. Start with “nano” and “10^-9” and end with “giga” and “10^9”. An example of the table is below.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>nano     10^-9
+micro    10^-6
+milli    10^-3
+...       ...
+mega     10^6
+giga     10^9
+</pre></div>
+</div>
+<p>Q09.24 Python’s <code class="docutils literal notranslate"><span class="pre">bin()</span></code> function converts an integer into its binary representation (a number represented as <code class="docutils literal notranslate"><span class="pre">1</span></code>’s and <code class="docutils literal notranslate"><span class="pre">0</span></code>’s). Use the <code class="docutils literal notranslate"><span class="pre">bin()</span></code> function to build a table of values from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">10</span></code> showing the binary representation of each number. Hint: use <code class="docutils literal notranslate"><span class="pre">bin(i)[2:]</span></code> to remove <code class="docutils literal notranslate"><span class="pre">0b</span></code> from the output of the <code class="docutils literal notranslate"><span class="pre">bin()</span></code> function. An example of the table is below.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>0     0
+1     1
+2     10
+3     11
+4     100
+...   ...
+</pre></div>
+</div>
+<p>Q09.25 Iodine-131 is a radioactive isotope of iodine that has a half-life of about 8 days. This means that after 8 days 100g of iodine-131 will decay to 100g/2 = 50g, and after 16 days, 100g of iodine-131 will decay to (100g/2)/2 = 25g. Use a for loop to calculate the mass of 100g of Iodine-131 left after 1 year of radioactive decay.</p>
+<p>Q09.26 Use a for loop to ask a user for five numbers. Use another for loop to print out the largest of the five numbers back to the user.</p>
+<p>Q09.27 Use a for loop to ask a user for three exam grades. Print back to the user the average of the three grades.</p>
+<p>Q09.28 Use a for loop to ask a user for 10 numbers. Print back the mean, median, and mode of the numbers. Hint: Python’s <code class="docutils literal notranslate"><span class="pre">statistics</span></code> module is part of the Standard Library. <code class="docutils literal notranslate"><span class="pre">statistics.mean()</span></code>, <code class="docutils literal notranslate"><span class="pre">statistics.median()</span></code> and <code class="docutils literal notranslate"><span class="pre">statistics.mode()</span></code> are three functions present in the <code class="docutils literal notranslate"><span class="pre">statistics</span></code> module.</p>
+<p>Q09.29 Write a program that requests a word from a user and then counts the number of vowels in the word. The English vowels are <code class="docutils literal notranslate"><span class="pre">a,</span> <span class="pre">e,</span> <span class="pre">i,</span> <span class="pre">o,</span> <span class="pre">u,</span> <span class="pre">y</span></code>. Hint: the code <code class="docutils literal notranslate"><span class="pre">'a'</span> <span class="pre">in</span> <span class="pre">['a','e','i','o','u','y']</span></code> and <code class="docutils literal notranslate"><span class="pre">'a'</span> <span class="pre">in</span> <span class="pre">'aeiouy'</span></code> both return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</section>
+<section id="while-loops">
+<h2>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">#</a></h2>
+<p>Q09.40 Use a while loop to sum the elements in the list <code class="docutils literal notranslate"><span class="pre">[1,3,5,8,12]</span></code>. Print the sum to the user.</p>
+<p>Q09.41 Use a while loop to print out the numbers between 1 and 100 that have whole number square roots.</p>
+<p>Q08.42 Create a program that prompts a user for test scores. Continue to prompt the user for additional test scores until the user types <code class="docutils literal notranslate"><span class="pre">'q'</span></code>. When the user types <code class="docutils literal notranslate"><span class="pre">'q'</span></code>, the program stops asking the user for test scores and prints out the following statistics about the test scores the user entered:</p>
+<ul class="simple">
+<li><p>mean</p></li>
+<li><p>median</p></li>
+<li><p>standard deviation</p></li>
+</ul>
+<p>Q09.43 Use a while loop to validate user input. Ask the user to enter a value between 0 and 1. Print back to the user “Try again” if the user’s input is invalid. Print “Your number works!” when the user enters valid input.</p>
+<p>Q09.44 Use a while loop to validate user input. Ask the user to enter a day of the week. Keep asking the user for a day of the week until they enter one. When the user enters a day of the week, print “Yup, it’s <code class="docutils literal notranslate"><span class="pre">&lt;day</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">week&gt;</span></code>”.</p>
+<p>Q09.45 Write a program to play the game higher/lower. Tell the user you have picked a random integer between 1 and 20.</p>
+<p>Hint: the code below creates a random integer <code class="docutils literal notranslate"><span class="pre">n</span></code> between 1 and 20:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="n">n</span> <span class="o">=</span> <span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>(a) Ask the user to enter a number (one time) and tell the user if the random number is higher or lower. Print <code class="docutils literal notranslate"><span class="pre">higher</span></code> if the random number is higher than the user’s guess, print <code class="docutils literal notranslate"><span class="pre">lower</span></code> if the random number is lower than the user’s guess. Print <code class="docutils literal notranslate"><span class="pre">You</span> <span class="pre">guessed</span> <span class="pre">it:</span> <span class="pre">&lt;random</span> <span class="pre">number&gt;</span></code> if the user guesses the random number.</p>
+<p>(b) Modify your program so that the program keeps printing <code class="docutils literal notranslate"><span class="pre">higher</span></code> or <code class="docutils literal notranslate"><span class="pre">lower</span></code> after each guess until the user guesses the random number. When the user guesses the random number print <code class="docutils literal notranslate"><span class="pre">You</span> <span class="pre">guessed</span> <span class="pre">it:</span> <span class="pre">&lt;random</span> <span class="pre">number&gt;</span></code>.</p>
+<p>(c) Extend your higher/lower game to record the number of guesses the user enters to guess the random number. Then the user guesses the random number print <code class="docutils literal notranslate"><span class="pre">You</span> <span class="pre">guessed:</span> <span class="pre">&lt;random</span> <span class="pre">number&gt;</span></code> in <code class="docutils literal notranslate"><span class="pre">&lt;number</span> <span class="pre">of</span> <span class="pre">tries&gt;</span></code>.</p>
+<p>Q09.46 A Taylor Series is an infinite series of mathematical terms that when summed together approximate a mathematical function. A Taylor Series can be used to approximate <span class="math notranslate nohighlight">\(e^x\)</span>, <span class="math notranslate nohighlight">\(sine\)</span>, and <span class="math notranslate nohighlight">\(cosine\)</span>.</p>
+<p>Taylor Series expansion for the function  <span class="math notranslate nohighlight">\(e^x\)</span> is below:</p>
+<div class="math notranslate nohighlight">
+\[  {e^x} = \sum\limits_{n = 0}^\infty  {\frac{{{x^n}}}{{n!}}}  = 1 + x + \frac{{{x^2}}}{{2!}} + \frac{{{x^3}}}{{3!}} + \frac{{{x^4}}}{{4!}} + ... \]</div>
+<p>Write a program that asks a user for a number <span class="math notranslate nohighlight">\(x\)</span>, then calculates <span class="math notranslate nohighlight">\(e^x\)</span> using the Taylor Series expansion using a while loop. Continue to add terms to the Taylor Series until the result from the Taylor series is less than 0.001 off the value of <span class="math notranslate nohighlight">\(e^x\)</span> calculated with Python’s <code class="docutils literal notranslate"><span class="pre">math.exp()</span></code> function.</p>
+</section>
+<section id="errors-explanations-and-solutions">
+<h2>Errors, Explanations, and Solutions<a class="headerlink" href="#errors-explanations-and-solutions" title="Permalink to this headline">#</a></h2>
+<p>Run the following code snippets. Explain the error in your own words. Then rewrite the code snippet to run error-free.</p>
+<p>Q09.80</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">n</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">end</span>
+</pre></div>
+</div>
+<p>Q09.81</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Q09.82</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="mi">1</span> <span class="o">==</span> <span class="n">n</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;valid&#39;</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Q09.83</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Q09.84</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./09-Loops"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="09.06-Summary.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">8.6. </span>Summary</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../10-Symbolic-Math/10.00-Introduction.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Symbolic Math</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Peter D. Kazarinoff<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
