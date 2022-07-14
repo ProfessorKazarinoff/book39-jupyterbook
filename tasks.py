@@ -2,19 +2,18 @@
 """
 An invoke script to run build tasks for the book
 
-$ invoke build website # this builds the mkdocs website website
- -- then cd into website directory and run mkdocs serve to view
+$ invoke build jb # this builds the jupyterbook website.
 
-$ invoke build pdf # this will eventually output a pdf/.tex file to complile with LaTeX to build a pdf
+$ invoke build pdf # this outputs a .tex file to complile with LaTeX to build a pdf
  -- then cd into pdf directory and use MikTek or other LaTeX complier to output a .pdf
 
 """
 
 import datetime
-import os
 import re
-import sys
+from sys import exc_info
 from os import chdir, getcwd, listdir
+from os.path import exists, join
 from pathlib import Path
 from shutil import copyfile, copytree, rmtree
 
@@ -118,21 +117,21 @@ def pdf(c):
     # export notebook node into a .tex file using templates
     d = datetime.datetime.now()
     output_file_path = Path(
-        os.getcwd(),
+        getcwd(),
         "pdf",
         f"Problem_Solving_with_Python_39_Edition_{d:%Y}_{d:%m}_{d:%d}.tex",
     )
-    template_file_path = Path(os.getcwd(), "templates", "latex", "book39.tex.j2")
+    template_file_path = Path(getcwd(), "templates", "latex", "book39.tex.j2")
     print("Attempting to produce a .tex file from the big combined notebook...")
     export_tex(nbnode, output_file_path, template_file_path)
     # modify TOC in .tex file so that chapter numbering works
     convert_TOC(output_file_path)
     # copy the copywrite and dedication page .tex files to the pdf/ dir
-    f_names = ["copywrite_page.tex", "dedication_page.tex"]
+    f_names = ("copywrite_page.tex", "dedication_page.tex")
     for f_name in f_names:
         copyfile(
-            Path(os.getcwd(), "templates", "latex", f_name),
-            Path(os.getcwd(), "pdf", f_name),
+            Path(getcwd(), "templates", "latex", f_name),
+            Path(getcwd(), "pdf", f_name),
         )
         print(f"Coppied {f_name} to pdf/ directory")
     # Print the final output
@@ -145,8 +144,8 @@ def pdf(c):
 
 def convert_TOC(output_file_path: Path):
     print("Working on taking the Preface and Appendix out of the TOC... function not ready yet")
-    chapter_list_exclude_from_TOC = ["Preface","Appendix"]
-    section_list_exclude_from_TOC = [
+    chapter_list_exclude_from_TOC = ("Preface","Appendix")
+    section_list_exclude_from_TOC = (
         "Motivation",
         "Acknowledgmments",
         "Supporting Materials",
@@ -162,7 +161,7 @@ def convert_TOC(output_file_path: Path):
         "Contributions",
         "Cover Artwork",
         "About the Author",
-    ]
+    )
     # latex_chapter_search_line = "\\" + "chapter" + "{" + f"{chapter}" + "}" + "\\" + "label" + "{" + f"{chapter.lower()}" + "}" "}"
     # latex_section_search_line = "\\" + "section" + "{" + f"{section}" + "}" + "\\" + "label" + "{" + f"{chapter.lower().replace(" ","-")}" + "}" "}"
             # \section{ASCII Character Codes}\label{ascii-character-codes}}
@@ -241,9 +240,9 @@ def copy_all_images(source_dir_path, dest_images_dir_path):
 
     for sub_dir in listdir(source_dir_path):
         if REG_nb_dir.match(sub_dir):
-            if os.path.exists(os.path.join(source_dir_path, sub_dir, "images")):
+            if exists(join(source_dir_path, sub_dir, "images")):
                 sub_dir_path = Path(source_dir_path, sub_dir, "images")
-                for f in os.listdir(sub_dir_path):
+                for f in listdir(sub_dir_path):
                     try:
                         if REG_img_filename.match(f):
                             copyfile(
@@ -254,7 +253,7 @@ def copy_all_images(source_dir_path, dest_images_dir_path):
                         print(f"Unable to copy file. {f}")
                         exit(1)
                     except:
-                        print("Unexpected error:", sys.exc_info())
+                        print("Unexpected error:", exc_info())
                         exit(1)
 
 
@@ -288,7 +287,7 @@ def iter_notebook_paths(src_dir_path):
         if REG_nb_dir.match(sub_dir):
             sub_dir_path = Path(src_dir_path, sub_dir)
             print(f"identified sub dir {sub_dir_path}")
-            for f in os.listdir(sub_dir_path):
+            for f in listdir(sub_dir_path):
                 if REG_nb.match(f):
                     nb_path_lst.append(Path(sub_dir_path, f))
                     print(f"added {f} to source notebook path list")
