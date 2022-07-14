@@ -114,6 +114,9 @@ parts:
       - file: 10-Symbolic-Math/10.07-Solving-Two-Equations-for-Two-Unknowns.ipynb
       - file: 10-Symbolic-Math/10.08-Summary.ipynb
       - file: 10-Symbolic-Math/10.09-Review-Questions.ipynb
+    - file: 11-Python-and-External-Hardware/11.00-Python-and-External-Hardware.ipynb
+      sections:
+      - file: 11-Python-and-External-Hardware/11.01-Introduction.ipynb
   - caption: Appendix
     numbered: False  # Only applies to chapters in the Appendix
     chapters:
